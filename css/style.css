@@ -519,7 +519,7 @@ footer p{
 	.about h2{ margin-bottom: 5px; }
 
 	footer{ 
-		width: 480px; 
+		width: 100%; 
 		margin-top: 25px;
 	}
 }
