@@ -470,7 +470,7 @@ footer p{
 		padding: 0 30px;
 	}
 	
-	#progress-bar{ right: 15%; }
+	#progress-bar{ right: 5%; }
 
 	.generic-flex{ flex-direction: column; }
 
