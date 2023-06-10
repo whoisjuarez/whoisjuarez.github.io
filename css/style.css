@@ -121,7 +121,7 @@ nav a:hover{
 	display: none;
 	position: fixed;
 	z-index: 2;
-	bottom: 50px;
+	bottom: 30px;
 	right: 12%;
 	height: 50px;
 	width: 50px;
@@ -469,8 +469,6 @@ footer p{
 		max-width: 100%;
 		padding: 0 30px;
 	}
-	
-/* 	#progress-bar{ right: 5%; } */
 
 	.generic-flex{ flex-direction: column; }
 
