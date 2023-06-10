@@ -390,13 +390,15 @@ footer p{
 
 	#progress-bar{ right: 5%; }
 
+	.port-flex .blue-filter{ background-blend-mode: normal; }
+
+	.modal-content{ max-width: 60%; }
+
+	.about h3{ margin-bottom: 20px; }
+
 	.btn{ margin-top: 10px; }
 
 	.btn:hover{ transform: none; }
-
-	.port-flex .blue-filter{ background-blend-mode: normal; }
-
-	.about h3{ margin-bottom: 20px; }
 
 	footer h4{ margin-bottom: 20px; }
 
@@ -425,6 +427,8 @@ footer p{
 	}
 
 	.port h4{ margin-top: 10px; }
+
+	.modal-content{ max-width: 70%; }
 
 	.about .photo{ min-height: 450px; }
 
@@ -505,6 +509,8 @@ footer p{
 		display: flex; 
 		gap: 20px;
 	 }
+
+	.modal-content{ max-width: 80%; }
 
 	.about .photo{ width: 100%; }
 
