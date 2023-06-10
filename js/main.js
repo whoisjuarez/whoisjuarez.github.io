@@ -1,10 +1,15 @@
-$(window).scroll(function() {    
-  var scroll = $(window).scrollTop();
-  if (scroll >= 400) {
-    $("progress-filled").addClass("gotop-visible");
-  } else {
-    $("progress-filled").removeClass("progress-bar-visible");
-  }
+// ANIMATIONS
+AOS.init({
+  // Global settings:
+  disable: false, // accepts following values: 'phone', 'tablet', 'mobile', boolean, expression or function
+  // Settings that can be overridden on per-element basis, by `data-aos-*` attributes:
+  offset: 150, // offset (in px) from the original trigger point
+  delay: 0, // values from 0 to 3000, with step 50ms
+  duration: 500, // values from 0 to 3000, with step 50ms
+  easing: 'ease-in-out', // default easing for AOS animations
+  once: 1, // whether animation should happen only once - while scrolling down
+  mirror: 0, // whether elements should animate out while scrolling past them
+  anchorPlacement: 'top', // defines which position of the element regarding to window should trigger the animation
 });
 
 // PROGRESS BAR - SCROLL TO TOP
@@ -39,52 +44,7 @@ window.addEventListener("scroll", () => {
 window.onscroll = calcScrollValue;
 window.onload = calcScrollValue;
 
-
-// ANIMATIONS
-AOS.init({
-  // Global settings:
-  disable: false, // accepts following values: 'phone', 'tablet', 'mobile', boolean, expression or function
-  // Settings that can be overridden on per-element basis, by `data-aos-*` attributes:
-  offset: 150, // offset (in px) from the original trigger point
-  delay: 0, // values from 0 to 3000, with step 50ms
-  duration: 500, // values from 0 to 3000, with step 50ms
-  easing: 'ease-in-out', // default easing for AOS animations
-  once: 1, // whether animation should happen only once - while scrolling down
-  mirror: 0, // whether elements should animate out while scrolling past them
-  anchorPlacement: 'top', // defines which position of the element regarding to window should trigger the animation
-});
-
-/* Modal */
-// document.getElementById('cn2').addEventListener('click', function(){
-//   document.querySelector('.modal').style.display = 'flex';})
-
-// function addModalEventListener(id) {
-//   const element = document.getElementById(id);
-//   if (element) {
-//     element.addEventListener('click', function() {
-//       document.querySelector('.modal').style.display = 'flex';
-//     });
-//   }
-// }
-
-// document.querySelector('.close').addEventListener('click', function() {
-//  document.querySelector('.modal').style.display = 'none';})
-
-
-
-// function addModalEventListener(id) {
-//   const element = document.getElementById(id);
-//   if (element) {
-//     element.addEventListener('click', function() {
-//       const modalId = element.getAttribute('data-modal-id');
-//       const modal = document.querySelector(`.modal[data-modal-id="${modalId}"]`);
-//       if (modal) {
-//         modal.style.display = 'flex';
-//       }
-//     });
-//   }
-// }
-
+// MODAL
 function addModalEventListener(id) {
   const element = document.getElementById(id);
   if (element) {
