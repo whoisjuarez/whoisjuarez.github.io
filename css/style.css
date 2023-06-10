@@ -469,6 +469,8 @@ footer p{
 		max-width: 100%;
 		padding: 0 30px;
 	}
+	
+	#progress-bar{ right: 5%; }
 
 	.generic-flex{ flex-direction: column; }
 
@@ -519,7 +521,7 @@ footer p{
 	.about h2{ margin-bottom: 5px; }
 
 	footer{ 
-		width: 480px; 
+		width: 100%; 
 		margin-top: 25px;
 	}
 }
