@@ -15,7 +15,7 @@ html{
 }
 
 body{
-	background: linear-gradient(180deg, var(--blue) 50%, #a7dfff 100%);
+	background: linear-gradient(180deg, var(--blue) 50%, var(--white-ish) 100%);
 	font-family: 'IBM Plex Sans', sans-serif;
 }
 
