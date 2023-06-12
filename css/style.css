@@ -5,7 +5,7 @@
 }
 
 :root {
-	--blue:#50bfff;
+	--blue:#52bfff;
 	--white-ish:#d8effd;
 }
 
@@ -234,6 +234,37 @@ nav a:hover{
 	opacity: 1; 
 }
 
+/* PORTFOLIO CAPTION */
+.port-flex .card .caption {
+	position: absolute;
+	box-sizing: border-box;
+	display: flex;
+	justify-content: center;
+	align-items: flex-start;
+	top: 180px;
+	left: 0;
+	right: 0;
+	margin-left: auto;
+	margin-right: auto;
+	width: 90%;
+	max-height: 50%;
+	padding: 5px;
+	background-color: #000;
+	color:var(--white-ish);
+	font-size: .8em;
+	font-weight: 300;
+	text-transform: uppercase;
+	/* text-align: center; */
+	opacity: 0;
+	transition: opacity 0.5s ease-in-out;
+	z-index: 3;
+  }
+
+  .port-flex .card:hover .caption {
+	opacity: 1;
+  }
+
+/* PORTFOLIO MODAL */
 .modal{
     display: none;
     position: fixed;
@@ -260,8 +291,6 @@ nav a:hover{
 }
 
 .modal img{ width: 100%; }
-
-/* .modal iframe{ width: 100%; } */
 
 #urbinz{ background-color: #fff; }
 
@@ -466,7 +495,7 @@ footer p{
 	h3{ font-size: 1.2em;}
 
 	nav{
-		max-width: 100%;
+		width: 100%;
 		padding: 0 30px;
 	}
 
