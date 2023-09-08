@@ -1,48 +1,339 @@
 <!DOCTYPE html>
 <html lang="en">
-   <head>
-      <meta charset="UTF-8">
-      <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <title>Maybe later? - DB Project - André Cardoso</title>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>André Cardoso - Final Project</title>
 
-      <link rel="preconnect" href="https://fonts.googleapis.com">
-      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-      <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@100;300;400;700&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer">
 
-      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@100;300;400;700;900&family=IBM+Plex+Sans:wght@100;300;400;700&display=swap" rel="stylesheet">
 
-      <link rel="stylesheet" href="css/todo_db_style.css">
+	<link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css"> <!-- ANIMATIONS CSS -->
 
-      <script src="js/todo_db.js" defer></script>
+	<link rel="stylesheet" href="css/style.css">
 
-   </head>
+	<script src="js/main.js" defer></script>
+</head>
+<body>
+	<!-- PROGRESS BAR - SCROLL TO TOP -->
+	<div id="progress-bar">
+		<span id="progress-fill">
+			<i class="fa-solid fa-chevron-up"></i>
+		</span>
+	</div>
 
-   <body>
-      <main>
-         <section class="intro">
-            <figure class="container">
-               <h1>maybe later?</h1>
-               <h2>Give me something to do</h2>
-               <a href="https://github.com/whoisjuarez/dynamic/tree/main/_project_db" target="_blank" class="github-msg">GitHub repository</a>
-            </figure>
+	<!-- HERO SECTION -->
+	<section class="hero" id="begin">
+		<div class="container">
+			<h1 data-aos="fade-in">Who is Juarez?</h1>
+			<div class="text-box">
+				<h2 data-aos="fade-in">One man Web & Design Studio by <strong>André Cardoso</strong></h2>
+				<h3 data-aos="fade-in">Montreal, Canada</h3>
+			</div>
+		</div>
+	</section>
 
-            <figure id="add-update" class="form">
-               <div class="container">
-                  <form id="add_form" class="form-fields">
-                     <input id="form_field" name="item" type="text" placeholder="Enter an activity">
-                     <button? id="add_btn" class="btn-add" type="submit"><i class="fa-solid fa-plus"></i></button?>
-                  </form>
-   
-                  <form id="edit_form" class="form-fields">
-                     <input id="edit_form_field" name="edit-item" type="text">
-                     <button? id="save_btn" class="btn-update" type="submit"><i class="fa-solid fa-check"></i></button?>
-                  </form>
-               </div>
-            </figure>
+	<!-- STICKY NAV -->
+	<nav class="sticky-menu">
+		<a href="#begin">Begin</a>
+		<a href="#see">See</a>
+		<a href="#read">Read</a>
+		<a href="#know">Know</a>
+		<a href="#talk">Talk</a>
+	</nav>
 
-         </section>
+	<!-- PORTIFOLIO -->
+	<section class="port" id="see">
+		<div class="container">
+			<h4 data-aos="fade-in">See</h4>
 
-         <section class="list"></section>
-      </main>
-   </body>
+			<div class="port-flex">
+                <div class="port-left">
+                    <div class="card" data-aos="zoom-in">
+                        <div class="port-1 blue-filter">
+                            <a>
+								<img id="urbinz" data-modal-id="urbinz-modal" src="img/port/urbinz.jpg" alt="Branding - Urbinz">
+								<div class="caption">Urbinz :: Branding</div>
+							</a>
+                        </div>						
+			    	</div> <!-- END OF CARD -->
+
+                    <div class="card" data-aos="zoom-in">
+                        <div class="port-2 blue-filter">
+                            <a>
+								<img id="cn2" data-modal-id="cn2-modal" src="img/port/cn2.jpg" alt="PowerPoint Presentations - Collège National">
+								<div class="caption">Collège National :: Ppt Presentation</div>
+							</a> 
+                        </div>
+                    </div><!-- END OF CARD -->
+                </div>
+
+                <div class="port-middle" data-aos="zoom-in">
+                    <div class="card">
+                        <div class="port-3 blue-filter">
+                             <a>
+								<img id="anim" data-modal-id="anim-modal" src="img/port/anim.jpg" alt="PowerPoint Animated Infographic - Café: 12 benefits for your health">
+								<div class="caption">Café :: Ppt Infographic</div>
+							</a>
+                         </div>
+                    </div><!-- END OF CARD -->
+
+                    <div class="card">
+                         <div class="port-4 blue-filter" data-aos="zoom-in">
+                              <a>
+								<img id="pack" data-modal-id="pack-modal" src="img/port/pack.jpg" alt="Packaging - Joie">
+								<div class="caption">Joie :: Packaging</div>
+							</a> 
+                        </div>
+                    </div><!-- END OF CARD -->
+                </div>
+
+
+                <div class="port-right" data-aos="zoom-in">
+                    <div class="card">
+                        <div class="port-5 blue-filter">
+                            <a>
+								<img id="cn" data-modal-id="cn-modal" src="img/port/cn.jpg" alt="Branding - Collège National">
+								<div class="caption">Collège National :: Branding</div>
+							</a> 
+                        </div>
+                    </div><!-- END OF CARD -->
+
+                    <div class="card" data-aos="zoom-in">
+                        <div class="port-6 blue-filter">
+                            <a>
+								<img id="edenred" data-modal-id="edenred-modal" src="img/port/edenred.jpg" alt="PowerPoint Presentation - Edenred">
+								<div class="caption">Edenred :: Ppt Presentation</div>
+							</a>
+                        </div>
+                    </div><!-- END OF CARD -->
+                </div>
+		    </div>
+
+			<!-- MODAL -->
+            <div class="modal" data-modal-id="urbinz-modal">
+                <div class="modal-content" id="urbinz">
+                    <img src="img/port/urbinz/urbinz_port.jpg" alt="">
+
+					<div class="close"><i class="fa-regular fa-circle-xmark"></i></div>
+                </div>
+            </div> <!-- END OF MODAL URBINZ -->
+
+            <div class="modal" data-modal-id="cn2-modal">
+                <div class="modal-content" id="cn2">
+                    <img src="img/port/cn2/header.jpg" alt="">
+
+                    <div style="padding:56.25% 0 0 0;position:relative;">
+                    <iframe src="https://player.vimeo.com/video/721079532?h=e76fcb5f9e&color=50bfff" style="position:absolute;top:0;left:0;width:100%;height:100%;" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe></div><script src="https://player.vimeo.com/api/player.js"></script>
+
+                    <div style="padding:56.25% 0 0 0;position:relative;"><iframe id="pause" src="https://player.vimeo.com/video/721080133?h=eb672f9bdb&color=50bfff" style="position:absolute;top:0;left:0;width:100%;height:100%;" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe></div><script src="https://player.vimeo.com/api/player.js"></script>
+
+                    <img src="img/port/cn2/1.jpg" alt="">
+                    <img src="img/port/cn2/2.jpg" alt="">
+                    <img src="img/port/cn2/3.jpg" alt="">
+                    <img src="img/port/cn2/4.jpg" alt="">
+                    <img src="img/port/cn2/5.jpg" alt="">
+                    <img src="img/port/cn2/6.jpg" alt="">
+                    <img src="img/port/cn2/7.jpg" alt="">
+                    <img src="img/port/cn2/8.jpg" alt="">
+                    <img src="img/port/cn2/footer.jpg" alt="">
+
+					<div class="close"><i class="fa-regular fa-circle-xmark"></i></div>
+                </div>
+            </div> <!-- END OF MODAL CN2 -->
+
+			<div class="modal" data-modal-id="anim-modal">
+                <div class="modal-content" id="anim">
+                    <img src="img/port/anim/header.jpg" alt="">
+
+                    <div style="padding:56.25% 0 0 0;position:relative;"><iframe src="https://player.vimeo.com/video/138751895?h=8b9d0772b2&color=50bfff" style="position:absolute;top:0;left:0;width:100%;height:100%;" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe></div><script src="https://player.vimeo.com/api/player.js"></script>
+
+                    <img src="img/port/anim/1.jpg" alt="">
+                    <img src="img/port/anim/2.jpg" alt="">
+                    <img src="img/port/anim/3.jpg" alt="">
+                    <img src="img/port/anim/4.jpg" alt="">
+                    <img src="img/port/anim/5.jpg" alt="">
+                    <img src="img/port/anim/footer.jpg" alt="">
+
+					<div class="close"><i class="fa-regular fa-circle-xmark"></i></div>
+                </div>
+            </div> <!-- END OF MODAL ANIMATION -->
+
+			<div class="modal" data-modal-id="pack-modal">
+                <div class="modal-content" id="pack">
+                    <img src="img/port/pack/1.jpg" alt="">
+                    <img src="img/port/pack/2.jpg" alt="">
+                    <img src="img/port/pack/3.jpg" alt="">
+                    <img src="img/port/pack/4.jpg" alt="">
+                    <img src="img/port/pack/5.jpg" alt="">
+                    <img src="img/port/pack/6.jpg" alt="">
+                    <img src="img/port/pack/7.jpg" alt="">
+					<img src="img/port/pack/8.jpg" alt="">
+					<img src="img/port/pack/9.jpg" alt="">
+					<img src="img/port/pack/10.jpg" alt="">
+					<img src="img/port/pack/11.jpg" alt="">
+					<img src="img/port/pack/12.jpg" alt="">
+					<img src="img/port/pack/13.jpg" alt="">
+
+					<div class="close"><i class="fa-regular fa-circle-xmark"></i></div>
+                </div>
+            </div> <!-- END OF MODAL PACK -->
+
+			<div class="modal" data-modal-id="cn-modal">
+                <div class="modal-content" id="cn">
+                    <img src="img/port/cn/header.jpg" alt="">
+					<img src="img/port/cn/CN.gif" alt="">
+                    <img src="img/port/cn/1.jpg" alt="">
+                    <img src="img/port/cn/2.jpg" alt="">
+                    <img src="img/port/cn/3.jpg" alt="">
+                    <img src="img/port/cn/4.jpg" alt="">
+                    <img src="img/port/cn/5.jpg" alt="">
+                    <img src="img/port/cn/6.jpg" alt="">
+                    <img src="img/port/cn/7.jpg" alt="">
+                    <img src="img/port/cn/8.jpg" alt="">
+					<img src="img/port/cn/9.jpg" alt="">
+                    <img src="img/port/cn/footer.jpg" alt="">
+
+					<div class="close"><i class="fa-regular fa-circle-xmark"></i></div>
+                </div>
+            </div> <!-- END OF MODAL CN -->
+
+			<div class="modal" data-modal-id="edenred-modal">
+                <div class="modal-content" id="edenred">
+                    <img src="img/port/edenred/header.png" alt="">
+
+                    <div style="padding:75% 0 0 0;position:relative;"><iframe src="https://player.vimeo.com/video/95989842?h=c54b230985&color=50bfff" style="position:absolute;top:0;left:0;width:100%;height:100%;" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe></div><script src="https://player.vimeo.com/api/player.js"></script>
+
+                    <img src="img/port/edenred/1.jpg" alt="">
+                    <img src="img/port/edenred/2.jpg" alt="">
+                    <img src="img/port/edenred/3.jpg" alt="">
+                    <img src="img/port/edenred/4.jpg" alt="">
+                    <img src="img/port/edenred/5.jpg" alt="">
+                    <img src="img/port/edenred/footer.png" alt="">
+
+					<div class="close"><i class="fa-regular fa-circle-xmark"></i></div>
+                </div>
+            </div> <!-- END OF MODAL EDENRED -->
+		</div>
+		<a id="read"></a><!-- ANCHOR RESUME SECTION-->
+	</section>
+
+	<!-- RESUME -->
+	<section class="resume">
+		<div class="container">
+			<h4 data-aos="fade-in">Read</h4>
+			<div class="generic-flex">
+				<div class="left">
+					<h2 data-aos="fade-in">Experience</h2>
+					<div class="content" data-aos="slide-up">
+						<h5><i class="fa-regular fa-calendar-xmark"></i>May 2021 - Jun 2022</h5>
+						<h6>Collège National</h6>
+						<p>Marketing Designer</p>
+					</div>
+
+					<div class="content" data-aos="slide-up">
+						<h5><i class="fa-regular fa-calendar-xmark"></i>Dec 2015 - May 2021</h5>
+						<h6>Smolarz Design</h6>
+						<p>Packaging Designer</p>
+					</div>
+
+					<div class="content" data-aos="slide-up">
+						<h5><i class="fa-regular fa-calendar-xmark"></i>Jan 2015 - Jul 2015</h5>
+						<h6>Meu Estúdio</h6>
+						<p>PowerPoint Presentation Designer</p>
+					</div>
+
+					<div class="content" data-aos="slide-up">
+						<h5><i class="fa-regular fa-calendar-xmark"></i>Nov 2011 - Jun 2014</h5>
+						<h6>La Gracia Design</h6>
+						<p>PowerPoint Presentation Designer</p>
+					</div>
+				</div><!-- END OF RIGHT CARD -->
+
+				<div class="right">
+					<h2 data-aos="fade-in">Education</h2>	
+
+					<div class="content" data-aos="slide-up">
+						<h5><i class="fa-regular fa-calendar-plus"></i>Mar 2023 - Present</h5>
+						<h6>Website Design Specialist</h6>
+						<p>ACS - Vanier College, Montreal</p>
+					</div>	
+
+					<div class="content" data-aos="slide-up">
+						<h5><i class="fa-regular fa-calendar-check"></i>Feb 2004 - Dec 2007</h5>
+						<h6>Advertising & Publicity</h6>
+						<p>Bachelor - Brazil</p>
+					</div>
+
+					<div class="content" data-aos="slide-up">
+						<h5><i class="fa-regular fa-calendar-check"></i>Feb 2000 - Dec 2001</h5>
+						<h6>Admin, Commerce & IT</h6>
+						<p>DEP - Brazil</p>
+					</div>
+				</div> <!-- END OF LEFT CARD -->
+			</div>
+		</div>
+	<a id="know"></a><!-- ANCHOR ABOUT SECTION-->
+	</section>
+
+	<!-- ABOUT -->
+	<section class="about">
+		<div class="container">
+			<h4 data-aos="fade-in">Know</h4>
+			<div class="generic-flex">
+				<div class="photo" data-aos="slide-right"></div><!-- END OF CARD -->
+
+				<div class="content">
+					<h2 data-aos="slide-left">Who is Juarez?</h2>
+					<h3 data-aos="slide-left"><strong>André Cardoso</strong></h3>
+
+					<p data-aos="slide-left">Lorem ipsum dolor sit amet consectetur, adipisicing elit.</p>
+					<p data-aos="slide-left">Voluptate, ipsam laborum vero illo maiores, nihil quia quae labore deserunt doloremque magni cum debitis, excepturi earum esse saepe iusto. Ea, aspernatur?</p>
+
+					<div data-aos="fade-in">
+						<a class="btn" href="https://prideatwork.ca/" target="_blank"><i class="fa-solid fa-mars-double"></i></a>
+                        <a href="" class="btn">Hire me</a>
+						<a href="" class="btn">Download CV</a>
+					</div>
+				</div><!-- END OF CARD -->
+			</div>
+		</div>
+	</section>
+
+	<!-- FOOTER -->
+	<footer id="talk" data-aos="slide-up">
+		<div class="container">
+			<div class="contact">
+				<h4>Talk</h4>
+				<h3>Email</h3>
+				<a href="mailto:whoisjuarez@gmail.com">whoisjuarez@gmail.com</a>
+
+				<h3>Phone</h3>
+				<a href="tel:+1-438-926-1911">+1 438 926.1911</a>
+
+				<h3>Address</h3>
+				<p>Canada</p>
+				<p>Montreal, QC H2L 2Y3</p>
+				<p>5-2250 Plessis</p>
+			</div>
+
+			<div class="social">
+                <a href="https://www.behance.net/whoisjuarez" target="_blank"><i class="fa-brands fa-behance"></i></a>
+				<a href="https://vimeo.com/whoisjuarez" target="_blank"><i class="fa-brands fa-vimeo-v"></i></a>
+				<a href="https://www.linkedin.com/in/andr%C3%A9-cardoso-038126243/" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
+                <a href="https://www.instagram.com/whoisjuarez/" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+			</div>
+
+			<p>Template by who?</p>
+		</div>
+	</footer>
+
+	<!-- SCRIPTS ANIMATINOS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js" integrity="sha512-3gJwYpMe3QewGELv8k/BX9vcqhryRdzRMxVfq6ngyWXwo03GFEzjsUm8Q7RZcHPHksttq7/GFoxjCVUjkjvPdw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+	<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+</body>
 </html>
