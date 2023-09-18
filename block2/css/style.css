@@ -664,7 +664,7 @@ footer .social_media a{
 }
 
 /* === Media Queries === */
-@media only screen and (min-width: 1728px) {
+@media only screen and (min-width: 1730px) {
    .hero .text_box{ width: 85%; }
 }
 
