@@ -18,6 +18,11 @@
 *, *::before, *::after { box-sizing: border-box; }
 /* 2. Remove default margin */
 * { margin: 0; }
+
+html{
+   scroll-behavior: smooth;
+   overflow-x: hidden !important;
+}
 /* Typographic tweaks! - 3. Add accessible line-height, 4. Improve text rendering*/
 body {
    line-height: var(--line-body);
@@ -25,7 +30,6 @@ body {
    font-family: var(--font-body);
    font-size: 30px;
    font-weight: 400;
-   overflow-x: hidden;
    background-color: white;
 }
 /* 5. Improve media defaults */
@@ -463,8 +467,9 @@ a{
 
 .projectE3 .circle{
    width: 310px;
-   top: -50px;
+   top: -40px;
    right: -10%;
+   /* left: 40% */
 }
 
                
@@ -762,7 +767,7 @@ footer .social_media a{
    }
 
     .container{
-      width: 100%;
+      width: 1024px;
       max-width: 90%;
    }
 
@@ -866,8 +871,8 @@ footer .social_media a{
    
    .projectE3 .circle{
       width: 210px;
-      top: -50px;
-      right: -10%;
+      top: -30px;
+      right: 0;
    }
 
                
