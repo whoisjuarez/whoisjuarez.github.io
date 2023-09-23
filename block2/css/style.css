@@ -739,9 +739,10 @@ footer .social_media a{
 
 /* Tablet Horizontal */
 @media only screen and (max-width: 1024px) {
-   body{ font-size: 1.3rem; }
-
-   /* nav{ display: none; } */
+   body{ 
+      font-size: 1.3rem; 
+      overflow: hidden;
+   }
 
    .display_grid{ grid-gap: 15px; }
 
