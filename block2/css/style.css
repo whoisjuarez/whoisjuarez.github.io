@@ -739,8 +739,6 @@ footer .social_media a{
       overflow: hidden;
    }
 
-   .display_grid{ grid-gap: 15px; }
-
    h1, h3{ 
       font-size: 50px; 
       line-height: 1.1;
@@ -759,6 +757,10 @@ footer .social_media a{
    h4{
       font-size: 30px;
    }
+
+   .sticky{ position: fixed; }
+
+   .display_grid{ grid-gap: 15px; }
 
    .btn_yellow{
       padding: 10px 20px;
