@@ -866,7 +866,7 @@ footer .social_media a{
 
    .about .grid_span2{ grid-column: 1; }
 
-   .about .grid_span4{ grid-column: 2 / 4; }
+   .about .grid_span4{ grid-column: 2 / span 5; }
 	
    .about_square{ gap: 15px; }
 
