@@ -817,7 +817,10 @@ footer .social_media a{
 
                
 /* Hero */
-   .hero{ height: 680px; }
+   .hero{ 
+      height: 680px; 
+      margin-top: 140px;
+   }
 
    .hero .text_box{ width: 94%; }
 
