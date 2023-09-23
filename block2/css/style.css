@@ -70,7 +70,7 @@ h4{
 }
 
 header{ 
-   position: fixed; 
+   position: relative; 
    height: 140px;
 }
 
@@ -171,6 +171,11 @@ a{
 	z-index: 100;
 }
 
+.logo img{ 
+   width: 400px; 
+   margin-left: -20px;
+}
+
 .menu_bg{
    background-color: white;
    transition: background-color .25s ease-in-out;
@@ -180,11 +185,17 @@ a{
    display: flex;
    justify-content: space-between;
    align-items: center;
+   position:relative;
 }
 
-.logo img{ 
-   width: 400px; 
-   margin-left: -20px;
+.menu{
+   display: flex;
+   gap:20px;
+}
+
+.drop_menu{ 
+   background: white;
+   border-radius: var(--radius30);
 }
 
 .menu0{
@@ -384,7 +395,6 @@ a{
 .projectE3 .accordion {
    background-color: transparent;
    cursor: pointer;
-   width: 100%;
    border: none;
    outline: none;
    transition: 0.4s;
@@ -731,14 +741,7 @@ footer .social_media a{
 @media only screen and (max-width: 1024px) {
    body{ font-size: 1.3rem; }
 
-   nav{ display: none; }
-
-   .hamburger{ display: block; }
-
-   .hamburger:hover:focus:active{
-      background-color: black;
-      color: white;
-   }
+   /* nav{ display: none; } */
 
    .display_grid{ grid-gap: 15px; }
 
@@ -771,6 +774,46 @@ footer .social_media a{
       max-width: 90%;
    }
 
+   .logo img{ 
+      margin-left: -30px;
+   }
+
+/* Menu */
+   .hamburger{ 
+      display: block;
+      cursor: pointer;
+      z-index: 1;
+   }
+
+   .hamburger:hover,
+   .hamburger:focus,
+   .hamburger:active {
+      background-color: black;
+      color: white;
+   }
+
+   .drop_menu{
+      position: absolute;
+      top: 29.4%;
+      right: 0;
+      padding: 10px;
+      width: 310px;
+      display: none;
+   }
+
+   .menu{
+      flex-direction: column;
+   }
+
+   .menu li a{
+		font-size: 1.2rem;
+	}
+
+   .menu0{
+      font-size: 1.8rem !important;
+      padding: 5px 9px 7px;
+   }
+
                
 /* Hero */
    .hero{ height: 680px; }
@@ -783,7 +826,7 @@ footer .social_media a{
 
    .hero .photo_hero_girl{ 
       top: -18%;
-      left: calc(50% + 187px); 
+      left: calc(50% + 185px); 
    }
 
    .hero .star{
@@ -945,9 +988,10 @@ footer .social_media a{
 
    .photo_bottom .triangle{
       rotate: 180deg;
-      width: 210px;
+      width: 180px;
       bottom: -20%;
-      right: -3%;
+      right: -2%;
+      /* left: 85%; */
    }
 
                
@@ -955,7 +999,7 @@ footer .social_media a{
 
 .partners{ padding: 15px 0 15px; }
 
-.partners .container{ max-width: 600px; }
+.partners .container{ max-width: 700px; }
 
                
 /* Footer */
