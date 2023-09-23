@@ -8,6 +8,12 @@ $(window).scroll(function() {
    }
 });
 
+//Menu Responsive
+$('#btn_drop_menu').on('click', function(e){
+   e.preventDefault();
+   $('.drop_menu').slideToggle('fast');
+});
+
 /**
  * Accordion
  */
@@ -33,7 +39,7 @@ for (i = 0; i < accordion.length; i++) {
  */
 $('.slider_partners').slick({
    infinite: true,
-   slidesToShow: 4,
+   // slidesToShow: 4,
    slidesToScroll: 1,
    centerMode: true,
    variableWidth: true,
@@ -42,7 +48,7 @@ $('.slider_partners').slick({
    autoplaySpeed: 0,
    infinite: true,
    cssEase: 'linear',
-   // mobileFirst: true,
+   mobileFirst: true,
    prevArrow: '<button type="button" class="slick-custom-arrow slick-prev"><i class="fa-solid fa-circle-chevron-left"></i></button>',
    nextArrow: '<button type="button" class="slick-custom-arrow slick-next"><i class="fa-solid fa-circle-chevron-right"></i></button>'
 });
@@ -69,6 +75,7 @@ gsap.to(".star",{
 // Triangle hero
  gsap.to(".triangle",{
    rotate: +360,
+   x: -100,
    scrollTrigger: {
       trigger: ".about",
       // markers: true,
@@ -91,6 +98,7 @@ gsap.to(".rectangle",{
  // Circle projectE3
  gsap.to(".circle",{
    scale: 2,
+   // x: 500,
    scrollTrigger: {
       trigger: ".projectE3",
       // markers: true,
