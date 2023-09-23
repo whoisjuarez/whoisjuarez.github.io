@@ -861,7 +861,14 @@ footer .social_media a{
 
                
 /* About */
-   .about_square{ gap: 10px; }
+
+   .display_grid3{ grid-template-columns: 335px 1fr 1fr; }
+
+   .about .grid_span2{ grid-column: 1; }
+
+   .about .grid_span4{ grid-column: 2 / 4; }
+	
+   .about_square{ gap: 15px; }
 
    .about .square1, .about .square2,
    .about .square3, .about .square4{
@@ -880,9 +887,8 @@ footer .social_media a{
 
    .about .text_box{
       width: 100%;
-      margin-top: 70px;
+      margin: 50px 0 0 0;
    }
-
                
 /* Project E3 */
    .projectE3{
