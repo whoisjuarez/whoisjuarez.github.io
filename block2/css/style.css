@@ -193,11 +193,6 @@ a{
    gap:20px;
 }
 
-.drop_menu{ 
-   background: white;
-   border-radius: var(--radius30);
-}
-
 .menu0{
    font-size: 1.3rem;
    padding: 4px 7px 7px;
@@ -794,6 +789,8 @@ footer .social_media a{
    }
 
    .drop_menu{
+      background: white;
+      border-radius: var(--radius30);
       position: absolute;
       top: 29.4%;
       right: 0;
