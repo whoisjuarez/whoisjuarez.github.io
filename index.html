@@ -1,480 +1,339 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-   <meta charset="UTF-8">
-   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   <title>Worldwide Education Fund</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>André Cardoso - Final Project</title>
 
-   <!-- Fonts -->
-   <link rel="preconnect" href="https://fonts.googleapis.com">
-   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-   <link href="https://fonts.googleapis.com/css2?family=Montagu+Slab:opsz,wght@16..144,400;16..144,600&family=Mulish:wght@400;700;900&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer">
 
-   <!-- font awesome -->
-   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@100;300;400;700;900&family=IBM+Plex+Sans:wght@100;300;400;700&display=swap" rel="stylesheet">
 
-   <!-- Slick Slider 3 parts: -->
-   <!-- 1 css cdn -->
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.css" integrity="sha512-wR4oNhLBHf7smjy0K4oqzdWumd+r5/+6QO/vDda76MW5iug4PT7v86FoEkySIJft3XA0Ae6axhIvHrqwm793Nw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+	<link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css"> <!-- ANIMATIONS CSS -->
 
-   <!-- 2 jquery cdn -->
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+	<link rel="stylesheet" href="css/style.css">
 
-	<!-- 3 script -->
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js" integrity="sha512-XtmMtDEcNz2j7ekrtHvOVR4iwwaD6o/FUJe6+Zq+HgcCsk3kj4uSQQR8weQ2QVj1o0Pk6PwYLohm206ZzNfubg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-
-   <!-- GreenSock animations -->
-   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
-   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
-
-   <!-- Page css & script -->
-   <link rel="stylesheet" href="css/style.css">
-   <script src="js/main.js" defer></script>
+	<script src="js/main.js" defer></script>
 </head>
 <body>
-   <header class = "sticky">
-      <div class="container">
-         <div class="menu_flex">
-            <div class="logo">
-               <a href="#"><img src="img/WEF_logo.svg" alt=""></a>
-            </div>
-            
-            <nav>
-               <div class="drop_menu">
-                     <ul class= "menu">
-                     <li><a href="#" class="menu0"><i class="fa-solid fa-house"></i></a></li>
-                     <li><a href="#" class="menu1">Who we are</a></li>
-                     <li><a href="#" class="menu2">What we do</a></li>
-                     <li><a href="#" class="menu3">Media</a></li>
-                     <li><a href="#" class="menu4">Global Virtual School</a></li>
-                     <li><a href="#" class="menu5">Get in touch</a></li>
-                     <li class="btn_donate"><a href="#"><i class="fa-solid fa-circle-dollar-to-slot"></i> Donate <i class="fa-solid fa-circle-dollar-to-slot"></i></a></li>
-                  </ul>
-               </div>
-            </nav>
+	<!-- PROGRESS BAR - SCROLL TO TOP -->
+	<div id="progress-bar">
+		<span id="progress-fill">
+			<i class="fa-solid fa-chevron-up"></i>
+		</span>
+	</div>
 
-            <div class="hamburger" id="btn_drop_menu">
-					<i class="icon_drop_menu fa-solid fa-bars"></i>
-				</div>
-         </div>
-      </div>
-   </header>
+	<!-- HERO SECTION -->
+	<section class="hero" id="begin">
+		<div class="container">
+			<h1 data-aos="fade-in">Who is Juarez?</h1>
+			<div class="text-box">
+				<h2 data-aos="fade-in">One man Web & Design Studio by <strong>André Cardoso</strong></h2>
+				<h3 data-aos="fade-in">Montreal, Canada</h3>
+			</div>
+		</div>
+	</section>
 
-   <main class="container">
-      <!-- Hero -->
-      <section class="hero display_grid">
-         <article class="text_box grid_span3">
-            <h1>Breaking the cycle of generational poverty and fostering prosperity for children and young adults in remote areas of the world.</h1>
-         </article>
+	<!-- STICKY NAV -->
+	<nav class="sticky-menu">
+		<a href="#begin">Begin</a>
+		<a href="#see">See</a>
+		<a href="#read">Read</a>
+		<a href="#know">Know</a>
+		<a href="#talk">Talk</a>
+	</nav>
 
-         <figure class="grid-span3">
-            <img src="img/photo-hero_girl.png" alt="A Silent little girl in gray clothes and white hijab look at camera" class="photo_hero_girl">
-            <img src="img/photo-hero_boy.png" alt="A little boy smiling in a black and white striped shirt" class="photo_hero_boy">
-         </figure>
+	<!-- PORTIFOLIO -->
+	<section class="port" id="see">
+		<div class="container">
+			<h4 data-aos="fade-in">See</h4>
 
-         <!-- Decorations -->
-         <figure class="decorations">
-            <!-- Don't change waves position - JS -->
-            <img src="img/deco/waves_single.svg" class=" waves_single">
-            <img src="img/deco/waves_single.svg" class=" waves_single">
-            <img src="img/deco/waves_single.svg" class=" waves_single">
-         </figure>
+			<div class="port-flex">
+                <div class="port-left">
+                    <div class="card" data-aos="zoom-in">
+                        <div class="port-1 blue-filter">
+                            <a>
+								<img id="urbinz" data-modal-id="urbinz-modal" src="img/port/urbinz.jpg" alt="Branding - Urbinz">
+								<div class="caption">Urbinz :: Branding</div>
+							</a>
+                        </div>						
+			    	</div> <!-- END OF CARD -->
+				
+                    <div class="card" data-aos="zoom-in">
+                        <div class="port-2 blue-filter">
+                            <a>
+								<img id="cn2" data-modal-id="cn2-modal" src="img/port/cn2.jpg" alt="PowerPoint Presentations - Collège National">
+								<div class="caption">Collège National :: Ppt Presentation</div>
+							</a> 
+                        </div>
+                    </div><!-- END OF CARD -->
+                </div>
+                                    
+                <div class="port-middle" data-aos="zoom-in">
+                    <div class="card">
+                        <div class="port-3 blue-filter">
+                             <a>
+								<img id="anim" data-modal-id="anim-modal" src="img/port/anim.jpg" alt="PowerPoint Animated Infographic - Café: 12 benefits for your health">
+								<div class="caption">Café :: Ppt Infographic</div>
+							</a>
+                         </div>
+                    </div><!-- END OF CARD -->
 
-         <!-- Leave those outside div -->
-         <img src="img/deco/star.svg" class="star">
-         <img src="img/deco/triangle.svg" class="triangle">
-      </section>
+                    <div class="card">
+                         <div class="port-4 blue-filter" data-aos="zoom-in">
+                              <a>
+								<img id="pack" data-modal-id="pack-modal" src="img/port/pack.jpg" alt="Packaging - Joie">
+								<div class="caption">Joie :: Packaging</div>
+							</a> 
+                        </div>
+                    </div><!-- END OF CARD -->
+                </div>
 
-      <!-- About -->
-      <section class="about display_grid">
-         <div class="about_square grid_span2">
-            <article class="square1">
-               <img src="img/icons/teachers.svg" alt="">
-               <p>200+ teachers</p>
-            </article>
-            <article class="square2">
-               <img src="img/icons/beneficiaries.svg" alt="">
-               <p>10,000+ beneficiaries</p>
-            </article>
-            <article class="square3">
-               <img src="img/icons/experience.svg" alt="">
-               <p>14+ years of experience</p>
-            </article>
-            <article class="square4">
-               <img src="img/icons/spaces.svg" alt="">
-               <p>36+ learning spaces</p>
-            </article>
-         </div>
-         <div class="text_box grid_span4">
-            <h2>Every child and youth, regardless of financial circumstance, caste, religion, or gender deserves a chance to reach his or her maximum potential.</h2>
-            <h2>We provide opportunities for quality English language education, technology proficiency, and educational and vocational scholarships.</h2>
-         </div>
-      </section>
+				
+                <div class="port-right" data-aos="zoom-in">
+                    <div class="card">
+                        <div class="port-5 blue-filter">
+                            <a>
+								<img id="cn" data-modal-id="cn-modal" src="img/port/cn.jpg" alt="Branding - Collège National">
+								<div class="caption">Collège National :: Branding</div>
+							</a> 
+                        </div>
+                    </div><!-- END OF CARD -->
 
-      <!-- Project E3 -->
-      <section class="projectE3">
-         <div class="display_grid">
-            <article class="text_box grid_span3">
-               <h3>Project E3: <strong>English, Education, Empowerment</strong></h3>
-            </article>
-            
-            <figure class="projectE3_img grid_span3"></figure>
-         </div>
+                    <div class="card" data-aos="zoom-in">
+                        <div class="port-6 blue-filter">
+                            <a>
+								<img id="edenred" data-modal-id="edenred-modal" src="img/port/edenred.jpg" alt="PowerPoint Presentation - Edenred">
+								<div class="caption">Edenred :: Ppt Presentation</div>
+							</a>
+                        </div>
+                    </div><!-- END OF CARD -->
+                </div>
+		    </div>
 
-         <div class="display_grid">
-            <div class="grid_span2">
-               <article class="english">
-                  <img src="img/icons/english.svg" alt="">
-                  <h4>English</h4>
-               </article>
+			<!-- MODAL -->
+            <div class="modal" data-modal-id="urbinz-modal">
+                <div class="modal-content" id="urbinz">
+                    <img src="img/port/urbinz/urbinz_port.jpg" alt="">
+					
+					<div class="close"><i class="fa-regular fa-circle-xmark"></i></div>
+                </div>
+            </div> <!-- END OF MODAL URBINZ -->
 
-               <button class="accordion arrow arrow_english"> 
-                  <i class="fa-solid fa-angle-down"></i>
-               </button>
+            <div class="modal" data-modal-id="cn2-modal">
+                <div class="modal-content" id="cn2">
+                    <img src="img/port/cn2/header.jpg" alt="">
 
-               <div class="accordion_panel">
-                  <table class="table_english">
-                     <thead>
-                        <tr>
-                           <th>Global virtual school</th>
-                        </tr>
-                     </thead>
+                    <div style="padding:56.25% 0 0 0;position:relative;">
+                    <iframe src="https://player.vimeo.com/video/721079532?h=e76fcb5f9e&color=50bfff" style="position:absolute;top:0;left:0;width:100%;height:100%;" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe></div><script src="https://player.vimeo.com/api/player.js"></script>
 
-                     <tbody>
-                        <tr>
-                           <td>
-                              <a href="#">English as Second Language (ESL)</a>
-                              <hr>
-                           </td>
-                        </tr>
-                        <tr>
-                           <td>
-                              <a href="#">English for Academic Purposes (EAP)</a>
-                              <hr>
-                           </td>
-                        </tr>
-                        <tr>
-                           <td>
-                              <a href="#">24/7 Portal</a>
-                              <hr>
-                           </td>
-                        </tr>
-                     </tbody>
+                    <div style="padding:56.25% 0 0 0;position:relative;"><iframe id="pause" src="https://player.vimeo.com/video/721080133?h=eb672f9bdb&color=50bfff" style="position:absolute;top:0;left:0;width:100%;height:100%;" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe></div><script src="https://player.vimeo.com/api/player.js"></script>
 
-                     <thead>
-                        <tr>
-                           <th>Brick and Mortar Operation</th>
-                        </tr>
-                     </thead>
+                    <img src="img/port/cn2/1.jpg" alt="">
+                    <img src="img/port/cn2/2.jpg" alt="">
+                    <img src="img/port/cn2/3.jpg" alt="">
+                    <img src="img/port/cn2/4.jpg" alt="">
+                    <img src="img/port/cn2/5.jpg" alt="">
+                    <img src="img/port/cn2/6.jpg" alt="">
+                    <img src="img/port/cn2/7.jpg" alt="">
+                    <img src="img/port/cn2/8.jpg" alt="">
+                    <img src="img/port/cn2/footer.jpg" alt="">
 
-                     <tbody>
-                        <tr>
-                           <td>
-                              <a href="#">In-School Language Labs</a>
-                              <hr>
-                           </td>
-                        </tr>
-                     </tbody>
-                  </table>
-               </div> <!-- end div accordion_panel -->
-            </div>
-               
-            <div class="grid_span2">
-               <article class="education">
-                  <img align="right" src="img/icons/education.svg" alt="">
-                  <h4>Education</h4>
-               </article>
+					<div class="close"><i class="fa-regular fa-circle-xmark"></i></div>
+                </div>
+            </div> <!-- END OF MODAL CN2 -->
 
-               <button class="accordion arrow arrow_education"> 
-                  <i class="fa-solid fa-angle-down"></i>
-               </button>
-               
-               <div class="accordion_panel">
-                  <table class="table_education">
-                     <tbody>
-                        <tr>
-                           <td>
-                              <a href="#">Anwar Mandani Scholarship Program, Tajikistan</a>
-                              <hr>
-                           </td>
-                        </tr>
-                        <tr>
-                           <td>
-                              <a href="#">WEF-HU MBA Scholarship USA, India, Pakistan and Tajikistan</a>
-                              <hr>
-                           </td>
-                        </tr>
-                        <tr>
-                           <td>
-                              <a href="#">Literacy Program at St. Placid's School, Bangladesh</a>
-                              <hr>
-                           </td>
-                        </tr>
-                     </tbody>
+			<div class="modal" data-modal-id="anim-modal">
+                <div class="modal-content" id="anim">
+                    <img src="img/port/anim/header.jpg" alt="">
 
-                     <thead>
-                        <tr>
-                           <th>Global Early Childhood Development Programs</th>
-                        </tr>
-                     </thead>
+                    <div style="padding:56.25% 0 0 0;position:relative;"><iframe src="https://player.vimeo.com/video/138751895?h=8b9d0772b2&color=50bfff" style="position:absolute;top:0;left:0;width:100%;height:100%;" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe></div><script src="https://player.vimeo.com/api/player.js"></script>
 
-                     <tbody>
-                        <tr>
-                           <td>
-                              <a href="#">ECD Centre Chitral, Pakistan</a>
-                              <hr>
-                           </td>
-                        </tr>
-                        <tr>
-                           <td>
-                              <a href="#">ECD Play Spaces Bartang, Tajikistan</a>
-                              <hr>
-                           </td>
-                        </tr>
-                     </tbody>
-                  </table>
-               </div> <!-- end div accordion_panel -->
-            </div>
-            
-            <div class="grid_span2">
-               <article class="empowerment">
-                  <img src="img/icons/empowerment.svg" alt="">
-                  <h4>Empowerment</h4>
-               </article>
+                    <img src="img/port/anim/1.jpg" alt="">
+                    <img src="img/port/anim/2.jpg" alt="">
+                    <img src="img/port/anim/3.jpg" alt="">
+                    <img src="img/port/anim/4.jpg" alt="">
+                    <img src="img/port/anim/5.jpg" alt="">
+                    <img src="img/port/anim/footer.jpg" alt="">
 
-               <button class="accordion arrow arrow_empowerment"> 
-                  <i class="fa-solid fa-angle-down"></i>
-               </button>
-               
-               <div class="accordion_panel">
-                  <table class="table_empowerment">
-                     <tr>
-                        <td>
-                           <a href="#">Emerging Technology Hub Program, Tajikistan</a>
-                           <hr>
-                        </td>
-                     </tr>
-                     <tr>
-                        <td>
-                           <a href="#">Cyber Security Program</a>
-                           <hr>
-                        </td>
-                     </tr>
-                     <tr>
-                        <td>
-                           <a href="#">Digital Marketing Assistant</a>
-                           <hr>
-                        </td>
-                     </tr>
-                     <tr>
-                        <td>
-                           <a href="#">Emerging Technology Hub Program, Tajikistan</a>
-                           <hr>
-                        </td>
-                     </tr>
-                  </table>
-               </div> <!-- end div accordion_panel -->
-            </div>
-         </div>
+					<div class="close"><i class="fa-regular fa-circle-xmark"></i></div>
+                </div>
+            </div> <!-- END OF MODAL ANIMATION -->
 
-         <!-- Decorations -->
-         <img src="img/deco/rectangle-round.svg" class="rectangle">
-         <img src="img/deco/circle.svg" class="circle">
-      </section>
+			<div class="modal" data-modal-id="pack-modal">
+                <div class="modal-content" id="pack">
+                    <img src="img/port/pack/1.jpg" alt="">
+                    <img src="img/port/pack/2.jpg" alt="">
+                    <img src="img/port/pack/3.jpg" alt="">
+                    <img src="img/port/pack/4.jpg" alt="">
+                    <img src="img/port/pack/5.jpg" alt="">
+                    <img src="img/port/pack/6.jpg" alt="">
+                    <img src="img/port/pack/7.jpg" alt="">
+					<img src="img/port/pack/8.jpg" alt="">
+					<img src="img/port/pack/9.jpg" alt="">
+					<img src="img/port/pack/10.jpg" alt="">
+					<img src="img/port/pack/11.jpg" alt="">
+					<img src="img/port/pack/12.jpg" alt="">
+					<img src="img/port/pack/13.jpg" alt="">
 
-      <!-- Featured Project - GVS -->
-      <section class="project_gvs">
-         <h3>Featured project:</h3>
-         <p class="GVS_title">GVS - Global Virtual School</p>
-         
-         <div class="display_grid">
-            <figure class="project_gvs_img grid_span4 grid_span6"></figure>
+					<div class="close"><i class="fa-regular fa-circle-xmark"></i></div>
+                </div>
+            </div> <!-- END OF MODAL PACK -->
 
-            <article class="text_box grid_span4 grid_span6">
-               <p>The Global Virtual School project is unique in that it connects,<strong> and in real-time</strong>, English-speaking volunteer teachers with students who are eager to improve their English to pursue post-secondary education, career training and better employment, all of which guarantee an escape from the cycle of generational poverty.</p>
-               <a href="#" class="btn_yellow">Know more</a>
-            </article>
+			<div class="modal" data-modal-id="cn-modal">
+                <div class="modal-content" id="cn">
+                    <img src="img/port/cn/header.jpg" alt="">
+					<img src="img/port/cn/CN.gif" alt="">
+                    <img src="img/port/cn/1.jpg" alt="">
+                    <img src="img/port/cn/2.jpg" alt="">
+                    <img src="img/port/cn/3.jpg" alt="">
+                    <img src="img/port/cn/4.jpg" alt="">
+                    <img src="img/port/cn/5.jpg" alt="">
+                    <img src="img/port/cn/6.jpg" alt="">
+                    <img src="img/port/cn/7.jpg" alt="">
+                    <img src="img/port/cn/8.jpg" alt="">
+					<img src="img/port/cn/9.jpg" alt="">
+                    <img src="img/port/cn/footer.jpg" alt="">
 
-            <article class="gvs_locations grid_span2 grid_span6">
-               <iframe src="https://www.google.com/maps/d/u/1/embed?mid=1mMrsVdTQpsOnLCqVSG0dNVemzYf2_Fc&ehbc=2E312F&noprof=1"></iframe>
-            </article>
-         </div>
+					<div class="close"><i class="fa-regular fa-circle-xmark"></i></div>
+                </div>
+            </div> <!-- END OF MODAL CN -->
 
-         <!-- Decorations -->
-         <figure class="decorations">
-            <!-- Don't change waves position - JS -->
-            <img src="img/deco/waves_single.svg" class=" waves_single_mobile">
-            <img src="img/deco/waves_single.svg" class=" waves_single_mobile">
-            <img src="img/deco/waves_single.svg" class=" waves_single_mobile">
-         </figure>
+			<div class="modal" data-modal-id="edenred-modal">
+                <div class="modal-content" id="edenred">
+                    <img src="img/port/edenred/header.png" alt="">
 
-            <!-- Leave those outside div -->
-            <img src="img/deco/star.svg" class="star">
-            <img src="img/deco/circle.svg" class="circle_mobile">
-      </section>
+                    <div style="padding:75% 0 0 0;position:relative;"><iframe src="https://player.vimeo.com/video/95989842?h=c54b230985&color=50bfff" style="position:absolute;top:0;left:0;width:100%;height:100%;" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe></div><script src="https://player.vimeo.com/api/player.js"></script>
 
-      <!-- CTA -->
-      <section class="cta display_grid">
-         <div class="grid_span4">
-            <div class="cta_donate">
-               <article class="text_box">
-                  <h4>Our humanitarian action relies on your generosity</h4>
-                  <p>For less than <strong>¢10 a day</strong>, <strong>$3 a month</strong> and <strong>$36 a year</strong> you can help a student learn English Language Skills in remote and rural areas of South and Central Asia.</p>
-                  <span class="btn_donate"><a href="#"><i class="fa-solid fa-circle-dollar-to-slot"></i> Donate <i class="fa-solid fa-circle-dollar-to-slot"></i></a></span>
-               </article>
+                    <img src="img/port/edenred/1.jpg" alt="">
+                    <img src="img/port/edenred/2.jpg" alt="">
+                    <img src="img/port/edenred/3.jpg" alt="">
+                    <img src="img/port/edenred/4.jpg" alt="">
+                    <img src="img/port/edenred/5.jpg" alt="">
+                    <img src="img/port/edenred/footer.png" alt="">
 
-               <article class="cta_donate_img"></article>
-            </div>
-         </div>
+					<div class="close"><i class="fa-regular fa-circle-xmark"></i></div>
+                </div>
+            </div> <!-- END OF MODAL EDENRED -->
+		</div>
+		<a id="read"></a><!-- ANCHOR RESUME SECTION-->
+	</section>
 
-         <div class="grid_span2">
-            <div class="cta_subscribe">
-               <article>
-                  <img src="img/icons/newsletter.svg" alt="">
-                  <p>Subscribe to our newsletter and stay updated on the latest news</p>
-                  <input type="text">
-                  <a href="" class="btn_yellow">Subscribe</a>
-               </article>
-            </div>
-         </div>
+	<!-- RESUME -->
+	<section class="resume">
+		<div class="container">
+			<h4 data-aos="fade-in">Read</h4>
+			<div class="generic-flex">
+				<div class="left">
+					<h2 data-aos="fade-in">Experience</h2>
+					<div class="content" data-aos="slide-up">
+						<h5><i class="fa-regular fa-calendar-xmark"></i>May 2021 - Jun 2022</h5>
+						<h6>Collège National</h6>
+						<p>Marketing Designer</p>
+					</div>
 
-         <!-- Decorations -->
-         <img src="img/deco/star.svg" class="star_mobile">
-      </section>
+					<div class="content" data-aos="slide-up">
+						<h5><i class="fa-regular fa-calendar-xmark"></i>Dec 2015 - May 2021</h5>
+						<h6>Smolarz Design</h6>
+						<p>Packaging Designer</p>
+					</div>
 
-      <!-- Photo Bottom -->
-      <section class="photo_bottom">
-         <figure class="photo_bottom_img"></figure>
+					<div class="content" data-aos="slide-up">
+						<h5><i class="fa-regular fa-calendar-xmark"></i>Jan 2015 - Jul 2015</h5>
+						<h6>Meu Estúdio</h6>
+						<p>PowerPoint Presentation Designer</p>
+					</div>
 
-         <!-- Decorations -->
-         <div class="decorations">
-            <!-- Don't change waves position - JS -->
-            <img src="img/deco/waves_single.svg" class=" waves_single">
-            <img src="img/deco/waves_single.svg" class=" waves_single">
-            <img src="img/deco/waves_single.svg" class=" waves_single">
-         </div>
+					<div class="content" data-aos="slide-up">
+						<h5><i class="fa-regular fa-calendar-xmark"></i>Nov 2011 - Jun 2014</h5>
+						<h6>La Gracia Design</h6>
+						<p>PowerPoint Presentation Designer</p>
+					</div>
+				</div><!-- END OF RIGHT CARD -->
 
-         <!-- Leave those outside div -->
-         <img src="img/deco/triangle2.svg" class="triangle">
-         <!-- <img src="img/deco/triangle2.svg" class="triangle_mobile"> -->
-      </section>
+				<div class="right">
+					<h2 data-aos="fade-in">Education</h2>	
 
-      <!-- Partners Slider -->
-      <section class="partners">
-         <h3>Our partners</h3>
-         <div class="container">
-            <div class="slider_partners">
-               <article class="partner_logo">
-                  <a href="https://www.linkedin.com/company/foundation-to-empower-students-worldwide/about/" target="_blank"><img src="img/partners/FoundEmpowerWorld.png" alt="Foundation to Empower Students Worldwide"></a>
-               </article>
-               
-               <article class="partner_logo">
-                  <a href="https://www.linkedin.com/company/pamirih/about/" target="_blank"><img src="img/partners/PamirInnovationHub.png" alt="Pamir Innovation Hub"></a>
-               </article>
-               
-               <article class="partner_logo">
-                  <a href="https://pk.usembassy.gov/education-culture/lincoln-corners/" target="_blank"><img src="img/partners/LinconCorners.png" alt="Lincoln Corners Pakistan"></a>
-               </article>
-               
-               <article class="partner_logo">
-                  <a href="https://hearthousedallas.org/" target="_blank"><img src="img/partners/HeartHouse.png" target="_blank" alt="Heart House of Dallas"></a>
-               </article>
-               
-               <article class="partner_logo">
-                  <a href="https://www.iread.org/" target="_blank"><img src="img/partners/IRead.png" alt="Institution for Rural Education and Development"></a>
-               </article>
-               
-               <article class="partner_logo">
-                  <a href="https://ucentralasia.org/" target="_blank"><img src="img/partners/UCA.png" alt="University of Central Asia"></a>
-               </article>
-               
-               <article class="partner_logo">
-                  <a href="https://www.iqrafund.org/" target="_blank"><img src="img/partners/iqra-fund.svg" alt="Iqra Fund"></a>
-               </article>
-               
-               <article class="partner_logo">
-                  <img src="img/partners/LincolnLearningCenter_Afg.png" alt="Lincoln Learning Center Afghanistan">
-               </article>
-               
-               <article class="partner_logo">
-                  <img src="img/partners/FoundEmpowerStudents.png" alt="Foundation to Empower Students">
-               </article>
-               
-               <article class="partner_logo">
-                  <img src="img/partners/SocDevResOrgAfghans.png" alt="Social Development and Research Organization for Afghans">
-               </article>
-               
-               <article class="partner_logo">
-                  <a href="https://www.agakhanschools.org/" target="_blank"><img src="img/partners/AgaKhanEducationServices.svg" target="_blank" alt="Aga Khan Education Service"></a>
-               </article>
-               
-               <article class="partner_logo">
-                  <a href="https://projectmala.org.uk/" target="_blank"><img src="img/partners/ProjectMala.png" alt="Project Mala"></a>
-               </article>
-               
-               <article class="partner_logo">
-                  <a href="https://accelerateprosperity.org/" target="_blank"><img src="img/partners/AccelerateProsperity.png" alt="Accelerate Prosperity"></a></article>
-               
-               <article class="partner_logo">
-                  <img src="img/partners/USAEmbassy.png" alt="United States Embassy">
-               </article>
-               
-               <article class="partner_logo">
-                  <a href="https://tj.usembassy.gov/education-culture/american-spaces/" target="_blank"><img src="img/partners/AmericanSpacesTajik.png" alt="American Spaces in Tajikistan"></a>
-               </article>
-               
-               <article class="partner_logo">
-                  <a href="https://www.unhcr.org/centralasia/en/" target="_blank"><img src="img/partners/UNHCR.png" alt="United Nations High Commission for Refugees, Central Asia"></a>
-               </article>
-            </div>
-         </div>
-      </section>
-   </main>
+					<div class="content" data-aos="slide-up">
+						<h5><i class="fa-regular fa-calendar-plus"></i>Mar 2023 - Present</h5>
+						<h6>Website Design Specialist</h6>
+						<p>ACS - Vanier College, Montreal</p>
+					</div>	
 
-   <!-- Footer -->
-   <footer class="container">
-      <section class="display_grid">
-         <div class="grid_span3">
-         <article>
-            <p class="footer_title">About WEF</p>
-            
-            <p>WEF is a 501(c)3 registered in USA. The Dallas Foundation (TDF) is the fiscal sponsor of the Worldwide Education Fund of the Dallas Foundation (WEF), a component fund of The Dallas Foundation, a 501(c)(3), publicly supported charity, Federal Tax ID 75-2890371.</p>
-            
-            <p>100% of all dollars raised through your contributions go towards implementation, operation, and maintenance of WEF’s projects and programs. All administrative expenses are paid by the Founders, Connie and Kamal Daya Gift Fund of The Dallas Foundation, and by our many generous, engaged volunteers.</p>
-         </article>
-      </div>
+					<div class="content" data-aos="slide-up">
+						<h5><i class="fa-regular fa-calendar-check"></i>Feb 2004 - Dec 2007</h5>
+						<h6>Advertising & Publicity</h6>
+						<p>Bachelor - Brazil</p>
+					</div>
 
-      <div class="site_map">
-         <article>
-            <p class="footer_title">Quick links</p>
-            <a href="">Active Projects</a>
-            <a href="">Success Stories</a>
-            <a href="">Media</a>
-         </article>
-      </div>
+					<div class="content" data-aos="slide-up">
+						<h5><i class="fa-regular fa-calendar-check"></i>Feb 2000 - Dec 2001</h5>
+						<h6>Admin, Commerce & IT</h6>
+						<p>DEP - Brazil</p>
+					</div>
+				</div> <!-- END OF LEFT CARD -->
+			</div>
+		</div>
+	<a id="know"></a><!-- ANCHOR ABOUT SECTION-->
+	</section>
 
-      <div class="grid_span2">
-         <article>
-            <p class="footer_title">Contact</p>
-            
-            <p>Worldwide Education Fund of the Dallas Foundation 3000 Pegasus Park Drive, Suite 930, Dallas, TX 75247</p>
-            
-            <p><strong>+1 (214) 741 9898</strong> | Mon-Fri 8:00 to 5:00 | <strong>worldeducationfund@gmail.com</strong></p>
-            
-            <div class="social_media">
-               <a href="https://www.facebook.com/WorldwideEducationFundoftheDallasFoundation/" target="_blank"><i class="fa-brands fa-square-facebook"></i></a>
-               
-               <a href="https://www.instagram.com/WorldwideEducationFund/" target="_blank"><i class="fa-brands fa-square-instagram"></i></a>
+	<!-- ABOUT -->
+	<section class="about">
+		<div class="container">
+			<h4 data-aos="fade-in">Know</h4>
+			<div class="generic-flex">
+				<div class="photo" data-aos="slide-right"></div><!-- END OF CARD -->
 
-               <a href="https://twitter.com/Kamal_WEF" target="_blank"><i class="fa-brands fa-square-x-twitter"></i></a>
-               
-               <a href="https://www.linkedin.com/company/worldwide-education-fund-of-the-dallas-foundation/" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
-               
-               <a href="https://www.youtube.com/user/IndiaEducationFund" target="_blank"><i class="fa-brands fa-square-youtube"></i></a>
-            </div>
-         </article>
-      </div>
-      </section>
-   </footer>
+				<div class="content">
+					<h2 data-aos="slide-left">Who is Juarez?</h2>
+					<h3 data-aos="slide-left"><strong>André Cardoso</strong></h3>
+					
+					<p data-aos="slide-left">Lorem ipsum dolor sit amet consectetur, adipisicing elit.</p>
+					<p data-aos="slide-left">Voluptate, ipsam laborum vero illo maiores, nihil quia quae labore deserunt doloremque magni cum debitis, excepturi earum esse saepe iusto. Ea, aspernatur?</p>
+
+					<div data-aos="fade-in">
+						<a class="btn" href="https://prideatwork.ca/" target="_blank"><i class="fa-solid fa-mars-double"></i></a>
+                        <a href="" class="btn">Hire me</a>
+						<a href="" class="btn">Download CV</a>
+					</div>
+				</div><!-- END OF CARD -->
+			</div>
+		</div>
+	</section>
+
+	<!-- FOOTER -->
+	<footer id="talk" data-aos="slide-up">
+		<div class="container">
+			<div class="contact">
+				<h4>Talk</h4>
+				<h3>Email</h3>
+				<a href="mailto:whoisjuarez@gmail.com">whoisjuarez@gmail.com</a>
+	
+				<h3>Phone</h3>
+				<a href="tel:+1-438-926-1911">+1 438 926.1911</a>
+	
+				<h3>Address</h3>
+				<p>Canada</p>
+				<p>Montreal, QC H2L 2Y3</p>
+				<p>5-2250 Plessis</p>
+			</div>
+
+			<div class="social">
+                <a href="https://www.behance.net/whoisjuarez" target="_blank"><i class="fa-brands fa-behance"></i></a>
+				<a href="https://vimeo.com/whoisjuarez" target="_blank"><i class="fa-brands fa-vimeo-v"></i></a>
+				<a href="https://www.linkedin.com/in/andr%C3%A9-cardoso-038126243/" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
+                <a href="https://www.instagram.com/whoisjuarez/" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+			</div>
+
+			<p>Template by who?</p>
+		</div>
+	</footer>
+
+	<!-- SCRIPTS ANIMATINOS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js" integrity="sha512-3gJwYpMe3QewGELv8k/BX9vcqhryRdzRMxVfq6ngyWXwo03GFEzjsUm8Q7RZcHPHksttq7/GFoxjCVUjkjvPdw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+	<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
 </body>
 </html>
