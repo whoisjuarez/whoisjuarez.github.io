@@ -111,7 +111,7 @@ scrollTrigger: {
    trigger: ".hero",
    // markers: true,
    scrub: true,
-   start: "top bottom",
+   start: "-=100",
    end: "+=2000"
 }, 
 });
@@ -145,19 +145,29 @@ gsap.to(".star",{
    scrollTrigger: { trigger: ".project_gvs",
       // markers: true,
       scrub: true,
-      start: "top bottom"
+      start: "-=1200"
    }, 
-   });
+});
+
+gsap.to(".star_tablet",{
+   rotate: -360,
+   x: 300,
+   scrollTrigger: { trigger: ".project_gvs",
+      // markers: true,
+      scrub: true,
+      start: "-=850"
+   }, 
+});
 
 gsap.to(".circle_mobile",{
-scale: 2,
-// x: 500,
-scrollTrigger: {
-   trigger: ".project_gvs",
-   // markers: true,
-   scrub: true,
-   start: "+=0"
-}, 
+   scale: 2,
+   // x: 500,
+   scrollTrigger: {
+      trigger: ".project_gvs",
+      // markers: true,
+      scrub: true,
+      start: "+=0"
+   }, 
 });
 
 //  CTA
@@ -181,7 +191,8 @@ scrollTrigger: {
    trigger: ".photo_bottom",
    // markers: true,
    scrub: true,
-   start: "top bottom"
+   start: "-=500",
+   end: "+=1000"
 }, 
 });
 

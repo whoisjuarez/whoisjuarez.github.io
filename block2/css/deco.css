@@ -2,13 +2,13 @@
 .hero .star{
    width: 390px;
    top: -11%;
-   left: calc(50% + 30px);
+   left: 50%;
 }
 
 .hero .triangle{
    width: 290px;
-   top: 80%;
-   left: calc(50% + 500px);
+   top: 68%;
+   left: calc(50% + 450px);
    z-index: -4;
 }
 
@@ -16,17 +16,17 @@
 
 .hero .decorations img:nth-child(1){ 
    top: 75%; 
-   left: calc(43% - 40px);
+   left: calc(50% - 180px);
 }
 
 .hero .decorations img:nth-child(2){ 
    top: 80%; 
-   left: calc(34% - 40px);
+   left: calc(50% - 320px);
 }
 
 .hero .decorations img:nth-child(3){ 
    top: 85%; 
-   left: calc(37% + 230px);
+   left: calc(50% - 5px);
 }
 
 /* Project E3 */
@@ -47,7 +47,7 @@
 /* Project GVS */
 .project_gvs .star{
    width: 490px;
-   top: -27%;
+   top: -12%;
    right: 12%;
 }
 
@@ -73,8 +73,9 @@
    right: -3%;
 }
 
-/* Show only on Mobile */
+/* Show on Mobile only */
 .project_gvs .decorations .waves_single_mobile,
+.project_gvs .star_tablet{ display: none;}
 .project_gvs .circle_mobile { display: none; }
 
 .cta .star_mobile{ display: none; }
