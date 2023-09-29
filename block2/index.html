@@ -29,7 +29,7 @@
 
    <!-- Page css & script -->
    <link rel="stylesheet" href="css/style.css">
-   <script src="js/script.js" defer></script>
+   <script src="js/main.js" defer></script>
 </head>
 <body>
    <header class = "sticky">
@@ -54,7 +54,7 @@
             </nav>
 
             <div class="hamburger" id="btn_drop_menu">
-					<i class="fa-solid fa-bars"></i>
+					<i class="icon_drop_menu fa-solid fa-bars"></i>
 				</div>
          </div>
       </div>
@@ -67,20 +67,22 @@
             <h1>Breaking the cycle of generational poverty and fostering prosperity for children and young adults in remote areas of the world.</h1>
          </article>
 
-         <article class="grid-span3">
+         <figure class="grid-span3">
             <img src="img/photo-hero_girl.png" alt="A Silent little girl in gray clothes and white hijab look at camera" class="photo_hero_girl">
             <img src="img/photo-hero_boy.png" alt="A little boy smiling in a black and white striped shirt" class="photo_hero_boy">
-         </article>
+         </figure>
 
          <!-- Decorations -->
-         <div class="decorations">
-         <img src="img/deco/waves_single.svg" class=" waves_single">
-         <img src="img/deco/waves_single.svg" class=" waves_single">
-         <img src="img/deco/waves_single.svg" class=" waves_single">
+         <figure class="decorations">
+            <!-- Don't change waves position - JS -->
+            <img src="img/deco/waves_single.svg" class=" waves_single">
+            <img src="img/deco/waves_single.svg" class=" waves_single">
+            <img src="img/deco/waves_single.svg" class=" waves_single">
+         </figure>
+
+         <!-- Leave those outside div -->
          <img src="img/deco/star.svg" class="star">
          <img src="img/deco/triangle.svg" class="triangle">
-         </div>
-
       </section>
 
       <!-- About -->
@@ -116,8 +118,7 @@
                <h3>Project E3: <strong>English, Education, Empowerment</strong></h3>
             </article>
             
-            <article class="projectE3_img grid_span3">
-            </article>
+            <figure class="projectE3_img grid_span3"></figure>
          </div>
 
          <div class="display_grid">
@@ -178,7 +179,6 @@
                </div> <!-- end div accordion_panel -->
             </div>
                
-            
             <div class="grid_span2">
                <article class="education">
                   <img align="right" src="img/icons/education.svg" alt="">
@@ -233,7 +233,7 @@
                         </tr>
                      </tbody>
                   </table>
-               </div>
+               </div> <!-- end div accordion_panel -->
             </div>
             
             <div class="grid_span2">
@@ -273,7 +273,7 @@
                         </td>
                      </tr>
                   </table>
-               </div>
+               </div> <!-- end div accordion_panel -->
             </div>
          </div>
 
@@ -284,12 +284,11 @@
 
       <!-- Featured Project - GVS -->
       <section class="project_gvs">
-         <!-- <strong>GVS - Global Virtual School</strong> -->
          <h3>Featured project:</h3>
          <p class="GVS_title">GVS - Global Virtual School</p>
          
          <div class="display_grid">
-            <article class="project_gvs_img grid_span4 grid_span6"></article>
+            <figure class="project_gvs_img grid_span4 grid_span6"></figure>
 
             <article class="text_box grid_span4 grid_span6">
                <p>The Global Virtual School project is unique in that it connects,<strong> and in real-time</strong>, English-speaking volunteer teachers with students who are eager to improve their English to pursue post-secondary education, career training and better employment, all of which guarantee an escape from the cycle of generational poverty.</p>
@@ -302,7 +301,16 @@
          </div>
 
          <!-- Decorations -->
-         <img src="img/deco/star.svg" class="star">
+         <figure class="decorations">
+            <!-- Don't change waves position - JS -->
+            <img src="img/deco/waves_single.svg" class=" waves_single_mobile">
+            <img src="img/deco/waves_single.svg" class=" waves_single_mobile">
+            <img src="img/deco/waves_single.svg" class=" waves_single_mobile">
+         </figure>
+
+            <!-- Leave those outside div -->
+            <img src="img/deco/star.svg" class="star">
+            <img src="img/deco/circle.svg" class="circle_mobile">
       </section>
 
       <!-- CTA -->
@@ -329,16 +337,26 @@
                </article>
             </div>
          </div>
+
+         <!-- Decorations -->
+         <img src="img/deco/star.svg" class="star_mobile">
       </section>
 
       <!-- Photo Bottom -->
       <section class="photo_bottom">
+         <figure class="photo_bottom_img"></figure>
+
+         <!-- Decorations -->
          <div class="decorations">
+            <!-- Don't change waves position - JS -->
             <img src="img/deco/waves_single.svg" class=" waves_single">
             <img src="img/deco/waves_single.svg" class=" waves_single">
             <img src="img/deco/waves_single.svg" class=" waves_single">
-            <img src="img/deco/triangle.svg" class="triangle">
          </div>
+
+         <!-- Leave those outside div -->
+         <img src="img/deco/triangle2.svg" class="triangle">
+         <!-- <img src="img/deco/triangle2.svg" class="triangle_mobile"> -->
       </section>
 
       <!-- Partners Slider -->
@@ -416,7 +434,7 @@
    <!-- Footer -->
    <footer class="container">
       <section class="display_grid">
-         <div class="grid_span3 grid_about">
+         <div class="grid_span3">
          <article>
             <p class="footer_title">About WEF</p>
             
@@ -426,7 +444,7 @@
          </article>
       </div>
 
-      <div class="site_map grid_sitemap">
+      <div class="site_map">
          <article>
             <p class="footer_title">Quick links</p>
             <a href="">Active Projects</a>
@@ -435,7 +453,7 @@
          </article>
       </div>
 
-      <div class="grid_span2 grid_contact">
+      <div class="grid_span2">
          <article>
             <p class="footer_title">Contact</p>
             
