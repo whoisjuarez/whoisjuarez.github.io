@@ -107,7 +107,7 @@ a{
 
 /* === General Classes === */
 .container{
-   width: 1730px;
+   width: 1728px;
    max-width: 90%;
    margin: 0 auto;
 }
@@ -381,6 +381,7 @@ a{
 .projectE3 .arrow{ 
    font-size: 3rem; 
    padding: 0;
+   color: black;
 }
 
 .projectE3 .arrow_english:hover,
@@ -403,6 +404,8 @@ a{
 /* both classes are in the same element - without space between names or it won't work, the space means the second class is inside the element */
 .arrow.active { transform: rotate(180deg); }
 
+.projectE3 table{ width: 100%; }
+
 .projectE3 table thead th{
    font-weight: 900;
    text-transform: uppercase;
@@ -421,9 +424,7 @@ a{
    display: block;
 }
 
-.projectE3 .table_english, .projectE3 .table_education, .projectE3 .table_empowerment{ 
-   margin-bottom: -28px; 
-}
+/* .projectE3 .table_english, .projectE3 .table_education, .projectE3 .table_empowerment{ margin-bottom: -28px; } */
 
 .projectE3 .table_english a:hover,
 .projectE3 .table_english a:focus,

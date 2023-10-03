@@ -16,17 +16,17 @@
 
 .hero .decorations img:nth-child(1){ 
    top: 75%; 
-   left: calc(50% - 180px);
+   left: calc(590px);
 }
 
 .hero .decorations img:nth-child(2){ 
    top: 80%; 
-   left: calc(50% - 320px);
+   left: calc(450px);
 }
 
 .hero .decorations img:nth-child(3){ 
    top: 85%; 
-   left: calc(50% - 5px);
+   left: calc(770px);
 }
 
 /* Project E3 */
