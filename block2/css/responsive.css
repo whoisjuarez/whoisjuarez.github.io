@@ -247,13 +247,31 @@
 
    .project_gvs .grid_span6{ grid-column: span 6; }
 
-   .project_gvs_img{ position: relative;
+   .project_gvs .grid_span3_gvs{ grid-column: span 3; }
+
+   .project_gvs_img{ 
+      position: relative;
       z-index: -1;
-      min-height: 425px; }
+      min-height: 425px; 
+   }
+
+   .project_gvs .btn_yellow{ margin-bottom: 10px;}
+
+   .project_gvs .extra_img {
+      display: block;
+      background: url(../img/project_gvs2.jpg);
+      background-size: cover;
+      background-position: top;
+      border-radius: var(--radius30);
+      min-height: 325px;
+      grid-column: 1 / 4;
+      grid-row: 3;
+   }
 
    .project_gvs iframe{
-      height: 300px;
-      margin-top: 10px;
+      height: 100%;
+      grid-column: 5 / 7;
+      grid-row: 3;
    }
 
    .project_gvs .star{ display: none; }
@@ -410,14 +428,6 @@
    footer .grid_span2{ margin-top: 0; }
 }
 
-
-
-
-
-
-
-/* MUDAR PARA 320PX AO INVES DE 480PX */
-
 /* Mobile vertical */
 @media only screen and (max-width: 480px){
    header{ height: 120px }
@@ -426,6 +436,8 @@
       font-size: 45px; 
       line-height: 1.1;
    }
+
+   h3{ font-size: 40px;}
 
    .container{ width: 100%; }
 
@@ -468,18 +480,18 @@
    .hero img{ width: 55% }
 
    .hero .photo_hero_boy{ 
-      top: 95%; 
+      top: 100%; 
       left: 0;
    }
 
    .hero .photo_hero_girl{ 
-      top: 75%;
+      top: 85%;
       right: 0; 
    }
 
    .hero .star{
       width: 250px;
-      top: 65%;
+      top: 70%;
       left: -20px;
    }
 
@@ -493,7 +505,7 @@
 
                
    /* About */
-   .about{ margin-top: 460px;}
+   .about{ margin-top: 115%;}
 
    .about .grid_span4{ 
       grid-column: 1; 
@@ -505,6 +517,8 @@
    .about .square1, .about .square3,
    .about .square2, .about .square4{ width: 100%; }
 
+   .about .square1{ padding: 0 20px;}
+
                
    /* Project E3 */
    .projectE3 .text_box{ min-height: 0; }
@@ -513,8 +527,6 @@
    .projectE3 .empowerment{ 
       margin-top: 0;
    }
-
-   /* .projectE3 .table_english, .projectE3 .table_education, .projectE3 .table_empowerment{ margin-bottom: 0; } */
 
    .projectE3 .rectangle{
       width: 220px;
@@ -526,20 +538,20 @@
 
                
    /* Project GVS */
-   /* .project_gvs p{ padding-right: 20px; } */
+   .project_gvs h3, .project_gvs .GVS_title{ padding-right: 40px;}
 
-   /* .project_gvs h3, .project_gvs .GVS_title{ padding-right: 40px;} */
-
-   .project_gvs .GVS_title{ font-size: 35px; }
-
-   .project_gvs .grid_span6{ grid-column: 1; }
+   .project_gvs .GVS_title{ font-size: 33px; }
 
    .project_gvs_img{ 
       min-height: 350px;
       z-index: -2; 
    }
 
+   .project_gvs .grid_span3_gvs{grid-column: span 6;}
+
    .project_gvs iframe{ height: 300px; }
+
+   .project_gvs .extra_img{ display: none; }
 
    .project_gvs .star{ display: none; }
 
@@ -553,28 +565,18 @@
    }
 
    .project_gvs .decorations img:nth-child(1){ 
-      top: 10%; 
+      top: 33%; 
       left: 90%;
    }
 
    .project_gvs .decorations img:nth-child(2){ 
-      top: 13%; 
+      top: 35%; 
       left: 70%;
    }
 
    .project_gvs .decorations img:nth-child(3){ 
-      top: 16%; 
+      top: 37%; 
       left: 90%;
-   }
-
-   .project_gvs .triangle_mobile{
-      position: absolute;
-      rotate: 180deg;
-      width: 130px;
-      top: 0;
-      bottom: 0;
-      right: -7%;
-      z-index: -1;
    }
 
    .project_gvs .circle_mobile{
@@ -692,8 +694,6 @@
    }
 }
 
-
-/* Mobile vertical */
 @media only screen and (max-width: 320px){
    h1, h3{  font-size: 35px; }
 
@@ -778,13 +778,24 @@
 
                
    /* Project GVS */
-   .project_gvs h3, .GVS_title{ text-align: center;}
+   .project_gvs h3, .project_gvs .GVS_title{ 
+      text-align: center;
+      padding-right: 0;
+   }
+
+   .project_gvs .GVS_title{ font-size: 30px; }
 
    .project_gvs .text_box{ text-align: center; }
 
    .project_gvs p{ padding-right: 0px; }
 
    .project_gvs iframe{ height: 350px; }
+
+   .project_gvs .decorations img:nth-child(1){ top: 30%; }
+
+   .project_gvs .decorations img:nth-child(2){  top: 32%; }
+
+   .project_gvs .decorations img:nth-child(3){ top: 34%; }
 
                
    /* Footer */

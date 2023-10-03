@@ -424,8 +424,6 @@ a{
    display: block;
 }
 
-/* .projectE3 .table_english, .projectE3 .table_education, .projectE3 .table_empowerment{ margin-bottom: -28px; } */
-
 .projectE3 .table_english a:hover,
 .projectE3 .table_english a:focus,
 .projectE3 .table_english a:active{ 
@@ -458,7 +456,7 @@ a{
 .project_gvs div{ align-items: top; }
 
 .project_gvs_img{
-   background: url(../img/project_gvs.jpg);
+   background: url(../img/project_gvs1.jpg);
    background-size: cover;
    background-position: top;
    border-radius: var(--radius30);
@@ -479,6 +477,8 @@ a{
    border-radius: var(--radius30);
    margin-bottom: -10px;
 }
+
+.project_gvs .extra_img{ display: none; }
 
                
 /* CTA */

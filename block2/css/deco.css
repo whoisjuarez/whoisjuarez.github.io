@@ -53,7 +53,6 @@
 
 /* Photo Bottom */
 .photo_bottom .decorations .waves_single{
-   /* display: block;  */
    position: absolute;
    width: 425px;
    left: -12%;
@@ -76,6 +75,7 @@
 /* Show on Mobile only */
 .project_gvs .decorations .waves_single_mobile,
 .project_gvs .star_tablet{ display: none;}
+
 .project_gvs .circle_mobile { display: none; }
 
 .cta .star_mobile{ display: none; }
