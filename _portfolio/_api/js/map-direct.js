@@ -17,21 +17,10 @@ function getLocation(){
 const initMap = async (location) => {
     const { Map } = await google.maps.importLibrary("maps");
 
-    // Directions
     mapDirections = new google.maps.Map(document.querySelector('#map-directions'), {
         center: location,
         zoom: 15
     });
-
-    //Suppress A & B markers - begin
-    // var rendererOptions = {
-    //     map: mapDirections,
-    //     draggable: true,
-    //     suppressMarkers: true,
-    // }
-
-    // directionsDisplay = new google.maps.DirectionsRendererOptions(rendererOptions);
-    //end
 
     directionsService = new google.maps.DirectionsService();
     directionsDisplay = new google.maps.DirectionsRenderer();

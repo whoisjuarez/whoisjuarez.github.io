@@ -92,12 +92,6 @@ function displayWeather(data){
     weather_name.innerHTML = `<div>${data.weather[0].main}</div>`;
     section_weather.appendChild(weather_name);
 
-    // div weather description
-    // let weather_description = document.createElement('div');
-    // weather_description.classList.add('weather-desc');
-    // weather_description.innerHTML = data.weather[0].description;
-    // section_weather.appendChild(weather_description);
-
     main.appendChild(section_weather);
 
     // temperature - using array line 16
@@ -158,12 +152,12 @@ function displayWeather(data){
     // div time
     let time = document.createElement('div');
     time.classList.add('time');
-    // Convert Unix timestamp to Date object
+
     let date = new Date(data.dt * 1000);
-    // Get hours and minutes from the Date object
+
     let hours = date.getHours();
     let minutes = date.getMinutes();
-    // Format the time string
+
     let timeString = hours.toString().padStart(2, '0') + ':' + minutes.toString().padStart(2, '0');
     time.innerHTML = `<i class="fa-solid fa-clock"></i> ${timeString}`;
     section_extraInfo.appendChild(time);
@@ -213,6 +207,3 @@ getPosition();
     // console.log(data.name)
     // console.log(data.main.temp);
     // console.log(data.weather[0].description);
-
-    // api key: af3c0b0edff1554c67366f907861b6c8
-// url = 'https://api.openweathermap.org/data/2.5/weather?lat=45.508888&lon=-73.561668&appid=af3c0b0edff1554c67366f907861b6c8&units=metric';
