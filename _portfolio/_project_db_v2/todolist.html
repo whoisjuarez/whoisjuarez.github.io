@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Maybe later?</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@100;300;400;700&display=swap"
+      rel="stylesheet" />
+
+    <!-- Font Awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer" />
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/todo_v2_db_style.css" />
+
+    <!-- JS -->
+    <script src="js/todo_v2_db_list.js" defer></script>
+    <script src="js/todo_v2_db_logout.js" defer></script>
+  </head>
+
+  <body>
+    <main>
+      <section class="intro">
+        <figure class="container">
+          <h1>maybe later?</h1>
+          <h2>v2 - More things to do</h2>
+          <a
+            href="https://github.com/whoisjuarez/dynamic/tree/main/_project_db_v2"
+            target="_blank"
+            class="github-msg"
+            >GitHub repository</a
+          >
+
+          <div class="welcome">
+            <h3 class="welcome_msg">
+              Welcome! <i class="fa-regular fa-face-grin"></i>
+            </h3>
+            <a href="" class="logout_btn"
+              >Logout <i class="fa-solid fa-arrow-right-from-bracket"></i
+            ></a>
+          </div>
+        </figure>
+
+        <div id="add-update" class="form">
+          <div class="container">
+            <form id="add_form" class="form-fields">
+              <input
+                id="form_field"
+                name="item"
+                type="text"
+                placeholder="Enter an activity" />
+              <button? id="add_btn" class="btn-add" type="submit"
+                ><i class="fa-solid fa-plus"></i
+              ></button?>
+            </form>
+
+            <form id="edit_form" class="form-fields">
+              <input id="edit_form_field" name="edit-item" type="text" />
+              <button? id="save_btn" class="btn-update" type="submit"
+                ><i class="fa-solid fa-check"></i
+              ></button?>
+            </form>
+          </div>
+        </div>
+
+        <div class="btn-selection container">
+
+          <button id="order_all">
+            <i class="fa-solid fa-arrow-right-arrow-left"></i>
+          </button>
+
+          <button id="show_pending">
+            <i class="fa-regular fa-square"></i>
+          </button>
+
+          <button id="show_checked">
+            <i class="fa-solid fa-square-check"></i>
+          </button>
+
+          <button id="show_all">
+            <i class="fa-solid fa-list-check"></i>
+          </button>
+        </div>
+      </section>
+
+      <section class="list"></section>
+    </main>
+  </body>
+</html>

@@ -1,0 +1,123 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html{
+    background: #000;
+}
+
+body {
+    font-family: "IBM Plex Sans", sans-serif;
+    max-width: 450px;
+    margin: 0 auto;
+    padding: 20px;
+    border-radius: 50px;
+    background-color: #fff;
+    min-height: 100vh;
+    display: grid;
+    grid-template-rows: 1fr auto;
+    place-items: center;
+}
+
+section {
+    margin: 20px;
+}
+
+h1 {
+    font-weight: 900;
+    font-size: 5em;
+    line-height: .9;
+    text-transform: uppercase;
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.city h3 {
+    font-size: 1.5em;
+    font-weight: 400;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.weather-info {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.weather-icon{
+    font-size: 7em;
+}
+
+.weather-name{
+    font-weight: 400;
+    font-size: 2em;
+    text-decoration: underline;
+    text-underline-offset: 6px;
+    text-decoration-thickness: 1.5px;
+}
+
+.weather-desc{
+    font-size: 1.5em;
+    font-weight: 300;
+}
+
+.show-temp {
+    text-align: center;
+    display: grid;
+    /* grid-template-columns: 1fr 1fr 1fr; */
+    grid-template-rows: 70px 1fr;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+.temp{
+    font-weight: 900;
+    font-size: 4em;
+    text-decoration: underline;
+    text-underline-offset: 6px;
+    text-decoration-thickness: 2px;
+}
+
+.temp_min, .temp_max {
+    font-weight: 700;
+    font-size: 2em;
+}
+
+
+.feels-like {
+    grid-column-start: 2;
+    font-size: 1.5em;
+    font-weight: 400;
+    line-height: 1;
+}
+
+.extra-info {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    font-size: 1em;
+    font-weight: 400;
+    text-align: center;
+    /* margin-bottom: 50px; */
+}
+
+/* .humidity {
+    padding-left: 20px;
+} */
+
+.footer{
+    min-width: 90%;
+    display: grid;
+    gap: 100px;
+    grid-template-columns: 1fr 1fr 1fr;
+    align-items: center;
+    font-size: 2em;
+    text-align: center;
+    color: #fff;
+    background: #000;
+    border-radius: 100px;
+    padding: 10px 30px;
+    margin: auto;
+    bottom: 90%;
+}
