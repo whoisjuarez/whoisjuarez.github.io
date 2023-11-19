@@ -447,7 +447,7 @@ footer p{
 	.social a:hover{ transform: none; }
 }
 
-@media only screen and (max-width: 800px){
+@media only screen and (max-width: 769px){
 	section{ padding: 20px 0; }
 
 	h1, h4{ 
@@ -466,16 +466,9 @@ footer p{
 
 	.port h4{ margin-top: 10px; }
 
-	.port-flex .card .caption {
-		z-index: 0;
-		top: 0;
-		opacity: 0;
-	  }
+	.port-flex .card .caption { display: none; }
 	
-	  .port-flex .card:hover .caption {
-		opacity: 0;
-		transform: none;
-	  }
+	.port-flex .card:hover .caption { display: none; }
 
 	.modal-content{ max-width: 70%; }
 
