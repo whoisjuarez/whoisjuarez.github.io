@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Climate+Crisis&family=Montserrat:wght@400;500;700&display=swap" rel="stylesheet">
+
+    <title>André Cardoso | Project 1 - 3d Website</title>
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <canvas id="scene-bg"></canvas>
+
+    <div class="loading-bar"></div>
+
+    <main>
+      <header>
+        <article>
+          <h1>So cute, you could eat it all!</h1>
+          <div class="instructions">        
+            <img src="img/mouse-scroll.svg" alt="">
+              <h2>Scroll for menu</h2>
+          </div>
+        </article>
+      </header>
+
+      <section class="left">
+        <img src="img/food/01.jpg" alt="">
+        <img src="img/food/02.jpg" alt="">
+        <img src="img/food/03.jpg" alt="">
+        <img src="img/food/04.jpg" alt="">
+        <img src="img/food/05.jpg" alt="">
+      </section>
+
+      <section class="right">
+        <img src="img/food/06.jpg" alt="">
+        <img src="img/food/07.jpg" alt="">
+        <img src="img/food/08.jpg" alt="">
+        <img src="img/food/09.jpg" alt="">
+        <img src="img/food/10.jpg" alt="">
+      </section>
+
+      <blockquote>
+        <h3>Bom appurrtit!</h3>
+        <p class="credit"><a href="https://sketchfab.com/3d-models/donut-20-8d6cac74abfc4b408ec86c37661fa5a6>">Donut 2.0</a> by <a href="https://sketchfab.com/iJacques">¡Jacques</a> licensed under <a href="https://creativecommons.org/licenses/by/4.0/">CC-BY-4.0</a></p>
+      </blockquote>
+    </main>
+
+    <!-- Threejs -->
+    <script type="importmap">
+      {
+        "imports": {
+          "three": "https://unpkg.com/three@v0.151.0/build/three.module.js",
+          "three/addons/": "https://unpkg.com/three@v0.151.0/examples/jsm/"
+        }
+      }
+    </script>
+
+    <!-- GSAP -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/gsap.min.js"></script>
+
+    <!-- Page script -->
+    <script type="module" src="js/main.js"></script>
+  </body>
+</html>
