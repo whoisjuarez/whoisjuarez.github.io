@@ -24,7 +24,7 @@ section{ padding: 40px 0; }
 h1{
 	font-family: 'Big Shoulders Display', cursive;
 	font-weight: 900;
-	font-size: 10em;
+	font-size: 10rem;
 	line-height: .9;
 	text-transform: uppercase;
 	margin-bottom: 30px;
@@ -32,7 +32,7 @@ h1{
 
 h2{ 
 	font-weight: 300;
-	font-size: 2.5em;
+	font-size: 2.5rem;
 	line-height: 1.3;
 	text-transform: uppercase;
 	text-decoration: underline;
@@ -43,7 +43,7 @@ h2{
 
 h3{
 	font-weight: 300;
-	font-size: 1.5em;
+	font-size: 1.5rem;
 	text-transform: uppercase;
 	text-decoration: underline;
 	text-decoration-thickness: 2px;
@@ -54,7 +54,7 @@ h3{
 h4{
 	font-family: 'Big Shoulders Display', cursive;
 	font-weight: 900;
-	font-size: 10em;
+	font-size: 10rem;
 	line-height: .9;
 	text-transform: uppercase;
 	margin-bottom: 30px;
@@ -62,17 +62,17 @@ h4{
 
 h5{
 	font-weight: 700;
-	font-size: 1em;
+	font-size: 1rem;
 }
 
 h6{
 	font-weight: 700;
-	font-size: 1.5em;
+	font-size: 1.5rem;
 }
 
 p{
 	font-weight: 300;
-	font-size: 1em;
+	font-size: 1rem;
 }
 
 a{
@@ -80,7 +80,7 @@ a{
 	text-decoration-color: transparent;
 	text-decoration-thickness: 2px;
 	text-underline-offset: 0;
-	font-size: 1em;
+	font-size: 1rem;
 	font-weight: 400;
 	display: block;
 	transition: 0.2s ease-in-out;
@@ -100,7 +100,7 @@ nav{
 }
 
 nav a{
-	font-size: 1.25em;
+	font-size: 1.25rem;
 	text-transform: uppercase;
 }
 
@@ -137,7 +137,7 @@ nav a:hover{
 	width: calc(100% - 5px);
 	background-color: var(--white-ish);
 	border-radius: 50%;
-	font-size: 1.5em;
+	font-size: 1.5rem;
 	color: #000;
 }
 
@@ -159,6 +159,8 @@ nav a:hover{
 	background-repeat: no-repeat;
 	background-position: bottom;
 }
+
+.hero h3{ margin-bottom: 5px; }
 
 .text-box{ width: 70%; }
 
@@ -187,6 +189,22 @@ nav a:hover{
 /* PORTFOLIO SECTION */
 .port h4{ margin-top: 20px; }
 
+.port h3{ margin-bottom: 20px; }
+
+.title-port { margin-top: 60px; }
+
+.port a{
+	color: black;
+	text-transform: uppercase;
+}
+
+.port a:hover{
+	text-decoration-color: black;
+	text-underline-offset: 6px;
+}
+
+.port i{ font-size: 1.5rem;}
+
 .port-flex{
 	display: flex;
 	gap: 20px;
@@ -197,6 +215,20 @@ nav a:hover{
 
 .port .port-left .port-middle .port-right{ width: 100%; }
 
+/* Port Web */
+.port-flex .port-web-1{ background: url('../img/port/3dweb.jpg') var(--blue); }
+
+.port-flex .port-web-2{ background: url('../img/port/whoami.jpg') var(--blue); }
+
+.port-flex .port-web-3{ background: url('../img/port/noteapp.jpg') var(--blue); }
+
+.port-flex .port-web-4{ background: url('../img/port/chatapp.jpg') var(--blue); }
+
+.port-flex .port-web-5{ background: url('../img/port/redesignwef.jpg') var(--blue); }
+
+.port-flex .port-web-6{ background: url('../img/port/signuiux.jpg') var(--blue); }
+
+/* Port design */
 .port-flex .port-1{ background: url('../img/port/urbinz.jpg') var(--blue); }
 
 .port-flex .port-2{ background: url('../img/port/cn2.jpg') var(--blue) }
@@ -247,7 +279,7 @@ nav a:hover{
 	padding: 5px;
 	background-color: #000;
 	color:var(--white-ish);
-	font-size: .8em;
+	font-size: .8rem;
 	font-weight: 300;
 	text-transform: uppercase;
 	text-align: center;
@@ -293,7 +325,7 @@ nav a:hover{
 	z-index: 11;
 	top: 15px;
 	right: 15px;
-	font-size: 1.5em;
+	font-size: 1.5rem;
 	color: #000;
 	/* color: var(--blue); */
 	cursor: pointer;
@@ -318,7 +350,7 @@ nav a:hover{
 	background-blend-mode: luminosity;
 	background-size: cover;
 	background-position: center;
-	min-height: 400px;
+	min-height: 500px;
 	filter: opacity(85%);
 	width: 50%;
 }
@@ -340,7 +372,7 @@ nav a:hover{
 .btn{
 	display: inline-flex;
 	padding: 15px 20px;
-	font-size: 1em;
+	font-size: 1rem;
 	font-weight: 700;
 	text-decoration: none;
 	text-transform: uppercase;
@@ -358,7 +390,7 @@ nav a:hover{
 	transform: translateY(-5px);
 }
 
-.btn i{ font-size: 1.2em; }
+.btn i{ font-size: 1.2rem; }
 
 /* FOOTER */
 footer{
@@ -415,7 +447,7 @@ footer a:hover{
 
 footer p{
 	color: var(--white-ish);
-	font-size: .8em;
+	font-size: .8rem;
 }
 
 /* BREAKPOINTS */
@@ -451,11 +483,11 @@ footer p{
 	section{ padding: 20px 0; }
 
 	h1, h4{ 
-		font-size: 9em;
+		font-size: 9rem;
 		margin-bottom: 10px;
 	}
 	
-	h2{ font-size: 2em;
+	h2{ font-size: 2rem;
 		margin-bottom: 20px; 
 	}
 
@@ -490,22 +522,22 @@ footer p{
 	section{ padding: 15px 0; }
 
 	h1{ 
-		font-size: 6em;
+		font-size: 6rem;
 		padding-top: 20px;
 		margin-bottom: 15px; 
 	}
 
 	h4{
-		font-size: 6em;
+		font-size: 6rem;
 		margin-bottom: 15px;
 	}
 
 	h2{ 
-		font-size: 1.5em; 
+		font-size: 1.5rem; 
 		margin-bottom: 15px;
 	}
 
-	h3{ font-size: 1.2em;}
+	h3{ font-size: 1.2rem;}
 
 	nav{
 		width: 100%;
