@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Who Am I? - Personal Api - André Cardoso</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@100;300;400;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <link rel="stylesheet" href="css/whoamiapi_style.css">
+    <script src="js/whoamiapi.js" defer></script>
+</head>
+<body>
+    <main>
+        <div class="container">
+            <h1>who am i?</h1>
+            <h2>Tell me your name and I'll tell you who you are</h2>
+
+            <div class="form">
+                <input id="userName" type="text" placeholder="Your first name">
+                <button? class="btn-go">go</button>
+            </div>
+
+            <p class="error">error</p>
+
+            <div class="begin">
+                <p class="tempName">You are</p>
+                <i id="iconBegin" class="fa-solid fa-person-half-dress"></i>
+            </div>
+
+            <div class="result">
+                <p class="name">Name</p>
+                <i id="icon" class="fa-solid fa-person"></i>
+                <p class="gender">Gender</p>
+                <p class="genderProbability">Probability: 1</p>
+                <p class="age">Age</p>
+                <p class="countryTitle">Three most possible countries:</p>
+                <p class="country">Country</p>
+                <p class="countryProbability">Probability: 1</p>
+                <p class="probability">Probability: 1</p>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <p>Api by André Cardoso  |  juarez, who?</p>
+        <p>References: <a href="https://genderize.io/" target="_blank">Genderize</a>  -  <a href="https://agify.io/" target="_blank">Agify</a>  -  <a href="https://nationalize.io/" target="_blank">Nationalize</a></p>
+    </footer>
+</body>
+</html>
