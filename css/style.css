@@ -75,6 +75,8 @@ p{
 	font-size: 1rem;
 }
 
+ul{ margin-left: 1rem; }
+
 a{
 	color: var(--white-ish);
 	text-decoration-color: transparent;
