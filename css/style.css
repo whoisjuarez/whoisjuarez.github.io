@@ -207,43 +207,61 @@ nav a:hover{
 
 .port i{ font-size: 1.5rem;}
 
-.port-flex{
+.port-flex-web,
+.port-flex-graphic{
 	display: flex;
 	gap: 20px;
 	margin-bottom: 40px;
 }
 
-.port-flex .card{ height: calc((100% + 40px)/2); }
+.port-flex-web .card, .port-flex-graphic .card{ position: relative; }
+
+.port-flex-web .card{ height: calc((100% + 40px)/4); }
+
+.port-flex-graphic .card{ height: calc((100% + 40px)/2); }
 
 .port .port-left .port-middle .port-right{ width: 100%; }
 
 /* Port Web */
-.port-flex .port-web-1{ background: url('../img/port/3dweb.jpg') var(--blue); }
+.port-flex-web .port-web-1{ background: url('../img/port/caetano.jpg') var(--blue); }
 
-.port-flex .port-web-2{ background: url('../img/port/whoami.jpg') var(--blue); }
+.port-flex-web .port-web-2{ background: url('../img/port/tamagalien.jpg') var(--blue); }
 
-.port-flex .port-web-3{ background: url('../img/port/noteapp.jpg') var(--blue); }
+.port-flex-web .port-web-3{ background: url('../img/port/3dweb.jpg') var(--blue); }
 
-.port-flex .port-web-4{ background: url('../img/port/chatapp.jpg') var(--blue); }
+.port-flex-web .port-web-4{ background: url('../img/port/whoami.jpg') var(--blue); }
 
-.port-flex .port-web-5{ background: url('../img/port/redesignwef.jpg') var(--blue); }
+.port-flex-web .port-web-5{ background: url('../img/port/projtasks.jpg') var(--blue); }
 
-.port-flex .port-web-6{ background: url('../img/port/signuiux.jpg') var(--blue); }
+.port-flex-web .port-web-6{ background: url('../img/port/kitnote.jpg') var(--blue); }
+
+.port-flex-web .port-web-7{ background: url('../img/port/noteapp.jpg') var(--blue); }
+
+.port-flex-web .port-web-8{ background: url('../img/port/chatapp.jpg') var(--blue); }
+
+.port-flex-web .port-web-9{ background: url('../img/port/petadoption.jpg') var(--blue); }
+
+.port-flex-web .port-web-10{ background: url('../img/port/kitnote_plan.jpg') var(--blue); }
+
+.port-flex-web .port-web-11{ background: url('../img/port/redesignwef.jpg') var(--blue); }
+
+.port-flex-web .port-web-12{ background: url('../img/port/signuiux.jpg') var(--blue); }
 
 /* Port design */
-.port-flex .port-1{ background: url('../img/port/urbinz.jpg') var(--blue); }
+.port-flex-graphic .port-1{ background: url('../img/port/urbinz.jpg') var(--blue); }
 
-.port-flex .port-2{ background: url('../img/port/cn2.jpg') var(--blue) }
+.port-flex-graphic .port-2{ background: url('../img/port/cn2.jpg') var(--blue) }
 
-.port-flex .port-3{ background: url('../img/port/anim.jpg') var(--blue) }
+.port-flex-graphic .port-3{ background: url('../img/port/anim.jpg') var(--blue) }
 
-.port-flex .port-4{ background: url('../img/port/pack.jpg') var(--blue) }
+.port-flex-graphic .port-4{ background: url('../img/port/pack.jpg') var(--blue) }
 
-.port-flex .port-5{ background: url('../img/port/cn.jpg') var(--blue) }
+.port-flex-graphic .port-5{ background: url('../img/port/cn.jpg') var(--blue) }
 
-.port-flex .port-6{ background: url('../img/port/edenred.jpg') var(--blue) }
+.port-flex-graphic .port-6{ background: url('../img/port/edenred.jpg') var(--blue) }
 
-.port-flex .blue-filter{
+.port-flex-web .blue-filter,
+.port-flex-graphic .blue-filter{
 	background-blend-mode: luminosity;
 	background-size: cover;
 	background-position: center;
@@ -251,7 +269,8 @@ nav a:hover{
 	height: fit-content;
 }
 
-.port-flex a img{
+.port-flex-web a img,
+.port-flex-graphic a img{
 	display: block;
 	width: 100%;
 	transition: 0.15s ease-in-out;
@@ -259,19 +278,18 @@ nav a:hover{
 	cursor: zoom-in;
 }
 
-.port-flex a:hover img{ 
+.port-flex-web a:hover img,
+.port-flex-graphic a:hover img{
 	opacity: 1; 
 }
 
 /* PORTFOLIO CAPTION */
-.port-flex .card .caption {
+.port-flex-web .card .caption,
+.port-flex-graphic .card .caption{
 	position: absolute;
-	z-index: 3;
+	z-index: 4;
 	box-sizing: border-box;
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	top: 180px;
+	top: 190px;
 	left: 0;
 	right: 0;
 	margin-left: auto;
@@ -289,7 +307,8 @@ nav a:hover{
 	transition: .15s ease-in-out;
 }
 
-  .port-flex .card:hover .caption {
+.port-flex-web .card:hover .caption,
+.port-flex-graphic .card:hover .caption{
 	opacity: 1;
 	transform: translateY(-5px);
 }
@@ -458,11 +477,11 @@ footer p{
 
 	#progress-bar{ right: 5%; }
 
-	.port-flex .blue-filter{ background-blend-mode: normal; }
+	.port-flex-web .blue-filter, .port-flex-graphic .blue-filter{ background-blend-mode: normal; }
 
-	.port-flex .card .caption { opacity: 1; }
+	.port-flex-web .card .caption, .port-flex-graphic .card .caption { opacity: 1; }
 	
-	.port-flex .card:hover .caption { transform: none; }
+	.port-flex-web .card:hover .caption, .port-flex-graphic .card:hover .caption { transform: none; }
 
 	.modal-content{ max-width: 60%; }
 
@@ -500,9 +519,9 @@ footer p{
 
 	.port h4{ margin-top: 10px; }
 
-	.port-flex .card .caption { display: none; }
+	.port-flex-web .card .caption, .port-flex-graphic .card .caption { display: none; }
 	
-	.port-flex .card:hover .caption { display: none; }
+	.port-flex-web .card:hover .caption, .port-flex-graphic .card:hover .caption { display: none; }
 
 	.modal-content{ max-width: 70%; }
 
@@ -563,15 +582,17 @@ footer p{
 
 	.port h4{ margin-top: 0; }
 
-	.port-flex{
+	.port-flex-web,
+	.port-flex-graphic{
 		display: flex;
 		flex-wrap: wrap;
 		margin-bottom: 30px;
 	}
 
-	.port-flex .card{ width: calc((100% - 20px) / 2); }
+	.port-flex-web .card, .port-flex-graphic .card{ width: calc((100% - 20px) / 2); }
 
-	.port .port-left{ 
+	.port .port-left-web,
+	.port .port-left-graphic{
 		display: flex; 
 		gap: 20px;
 	}
