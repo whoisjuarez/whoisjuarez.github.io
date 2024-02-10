@@ -1,0 +1,401 @@
+* {
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+}
+
+html {
+   scroll-behavior: smooth;
+   overflow-x: hidden;
+   
+   /* Scrollbar Firefox */
+   scrollbar-color: black lightgray;
+   scrollbar-width: thin;
+}
+
+/* Scrollbar Chrome/Safari */
+::-webkit-scrollbar{
+   width: 5px;
+}
+
+::-webkit-scrollbar-thumb{
+   background-color: black;
+}
+
+/* ::-webkit-scrollbar-thumb:hover{
+   background-color: lightgray;
+} */
+
+
+*, *::before, *::after {
+   box-sizing: border-box;
+}
+
+* {
+   margin: 0;
+}
+
+body {
+   font-family: 'Work Sans', sans-serif;
+   line-height: 1.5;
+   -webkit-font-smoothing: antialiased;
+   background-image: linear-gradient(
+      60deg,
+      hsl(327deg 62% 89%) 1%,
+      hsl(179deg 75% 83%) 27%,
+      hsl(176deg 100% 80%) 44%,
+      hsl(188deg 90% 79%) 63%,
+      hsl(234deg 100% 81%) 100%
+   );
+   background-attachment: fixed;
+   /* 
+   Link for gradient generator: 
+   https://www.joshwcomeau.com/gradient-generator?colors=ffffff|99fff8|f4d0e4|99fff8|add7f8&angle=0&colorMode=hcl&precision=1&easingCurve=1.1|1|-0.1|0 */
+}
+
+input, button, textarea, select {
+   font: inherit;
+   border: none;
+}
+
+p, h1, h2, h3, h4, h5, h6 {
+   overflow-wrap: break-word;
+}
+
+#root, #__next {
+   isolation: isolate;
+}
+
+/*
+*
+SPECIFIC STYLES 
+*
+*/
+
+article {
+   display: grid;
+   grid-template-columns: repeat(auto-fill, minmax(300px , 1fr));
+   grid-gap: 1rem;
+}
+
+h1, h2, h3 {
+   font-size: 5rem;
+   font-weight: 600;
+   text-align: center;
+   line-height: 1;
+}
+
+h2, h3{
+   font-size: 2.5rem;
+   margin-bottom: 1.5rem;
+}
+
+h3 {
+   font-size: 1.5rem;
+   text-transform: uppercase;
+}
+
+h4, h5{
+   font-size: 1.5rem;
+   font-weight: 400;
+   text-align: center;
+}
+
+h5{
+   font-size: 1.5rem;
+   margin-top: 1rem;
+}
+
+i.icon-cat-dog{
+   font-size: 4rem;
+}
+
+form {
+   display: grid;
+   grid-template-columns: repeat(2, auto);
+   align-items: center;
+   width: 480px;
+   max-width: 90%;
+   margin: 0 auto;
+}
+
+.form-add-edit{
+   border: 1px solid black;
+   padding: 1rem;
+   margin-bottom: 2rem;
+}
+
+form label {
+   font-weight: 600;
+   text-transform: uppercase;
+   font-size: 1rem;
+}
+
+::placeholder{
+   color: #999;
+   opacity: 1; /* Firefox */
+}
+
+form input,
+form select {
+   font-size: 1rem;
+   margin-bottom: .5rem;
+   background-color: black;
+   color: white;
+   padding: .5rem;
+}
+
+
+form input[type="submit"] {
+   grid-column: span 2;
+   font-size: 17px;
+}
+
+/*
+*
+GENERAL STYLES 
+*
+*/
+
+.container{
+   width: 1000px;
+   max-width: 90%;
+   margin: 2rem auto;
+}
+
+.menu-home{
+   display: flex;
+   justify-content: center;
+   margin-bottom: 1rem;
+}
+
+.menu-flex {
+   display: flex;
+   flex-wrap: wrap;
+   justify-content: center;
+   align-items: center;
+   gap: 1.5rem;
+   padding: .8rem 0;
+   color: white;
+   background-color: black;
+   margin-bottom: 2rem;
+}
+
+.menu-item {
+   display: flex;
+   gap: .5rem;
+   flex-wrap: wrap;
+   justify-content: flex-start;
+   align-items: center;
+}
+
+.credit{
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   flex-direction: column;
+   border-top: 5px solid black;
+}
+
+/* Buttons */
+
+.credit a{
+   font-size: 1rem;
+   font-weight: 600;
+   text-align: center;
+   text-decoration: none;
+   text-transform: uppercase;
+   color: white;
+   background-color: black;
+   outline: 1px solid black;
+   padding: .5rem 1rem;
+   margin: .5rem 0;
+}
+
+.btn-flex,
+.btn-flex form {
+   display: flex;
+   max-width: 100%;
+   justify-content: flex-end;
+   gap: 2rem;
+}
+
+form .btn-flex{
+   grid-column: span 2;
+   justify-content: center;
+   margin-top: .5rem;
+}
+
+.btn,
+.btn-confirm,
+.btn-delete{
+   padding: 10px 15px;
+   background-color: black;
+   border: 1px solid black;
+   font-size: 1rem;
+   color: white;
+   cursor: pointer;
+}
+
+.btn:hover,
+.credit a:hover{
+   background-color: white;
+   color: black;
+}
+
+.btn-delete:hover{
+   color: white;
+   background-color: rgb(255, 45, 111);
+}
+
+.btn-confirm:hover{
+   color: white;
+   background-color: rgb(23, 214, 125);
+}
+
+.menu-home .btn {
+   padding: 10px 14px;
+}
+
+.menu-item .btn {
+   color: black;
+   background-color: white;
+   border: 1px solid white;
+}
+
+.menu-item .btn:hover {
+   background-color: black;
+   color: white;
+}
+
+.menu-item .btn:first-of-type {
+padding: 10px 13px;
+}
+
+.menu-item .btn:last-of-type {
+   padding: 10px 15px;
+}
+
+.menu-home .btn,
+.menu-item .btn {
+   font-size: 1.2rem;
+}
+
+/* Cards */
+
+.card {
+   border: 1px solid black;
+   padding: 1rem;
+   display: flex;
+   flex-direction: column;
+   justify-content: space-between;
+   margin-bottom: 3rem;
+}
+
+.id, 
+/* .name,  */
+.species, 
+.breed, 
+.age, 
+.gender, 
+.color, 
+.coat-length, 
+.vaccines, 
+.neutered, 
+.toy, 
+.description, 
+.fee, 
+.price, 
+.quantity {
+   font-size: 1rem;
+   font-weight: 400;
+   margin-bottom: .3rem;
+}
+
+.name{
+   font-size: 1.5rem;
+   font-weight: 600;
+   text-decoration: underline;
+   text-underline-offset: .5rem;
+   margin-bottom: .5rem;
+}
+
+.id::before, 
+/* .name::before,  */
+.species::before, 
+.breed::before, 
+.age::before, 
+.gender::before, 
+.color::before, 
+.coat-length::before, 
+.vaccines::before, 
+.neutered::before, 
+.toy::before, 
+.description::before, 
+.fee::before, 
+.price::before, 
+.quantity::before {
+   font-weight: 600;
+   text-transform: uppercase;
+}
+
+.id::before {
+content: "ID: ";
+}
+
+/* .name::before { */
+   /* content: "Name: "; */
+/* } */
+
+.species::before {
+   content: "Species: ";
+}
+
+.breed::before {
+   content: "Breed: ";
+}
+
+.age::before {
+   content: "Age: ";
+}
+
+.gender::before {
+   content: "Gender: ";
+}
+
+.color::before {
+   content: "Color: ";
+}
+
+.coat-length::before {
+   content: "Coat length: ";
+}
+
+.vaccines::before {
+   content: "Vaccines: ";
+}
+
+.neutered::before {
+   content: "Neutered: ";
+}
+
+.toy::before {
+   content: "Toy Species: ";
+}
+
+.description::before {
+   content: "Description: ";
+}
+
+.fee::before {
+   content: "Fee: $";
+}
+
+.price::before {
+   content: "Price: $";
+}
+
+.quantity::before {
+   content: "Quantity: ";
+}
+
