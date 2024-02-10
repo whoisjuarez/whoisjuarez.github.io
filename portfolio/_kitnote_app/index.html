@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kitnote. Scratch your meows.</title>
+
+    <!-- Favicon -->
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/img/favicon_io/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/img/favicon_io/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/img/favicon_io/favicon-16x16.png">
+    <link rel="manifest" href="assets/img/favicon_io/site.webmanifest">
+
+    <!-- Google Material Icons -->
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded" rel="stylesheet" />
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Work+Sans&display=swap" rel="stylesheet">
+
+    <!-- JQuery Library -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
+        integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="assets/css/style.css">
+    <!-- <link rel="stylesheet" href="assets/css/notes.css"> -->
+</head>
+
+<body>
+    <header>
+        <!-- Logo -->
+        <figure class="logo-notes">
+            <img src="assets/img/kitnote_logo_final.svg" alt="Logo">
+        </figure>
+
+        <figure class="logo-notes-white">
+            <img src="assets/img/kitnote_logo_final_white.svg" alt="Logo">
+         </figure>
+   
+         <!-- Cat Deco -->
+         <figure class="cat-deco">
+            <img src="assets/img/cat-deco.svg" alt="">
+         </figure>
+   
+         <figure class="cat-deco-white">
+            <img src="assets/img/cat-deco_white.svg" alt="">
+         </figure>
+
+        <!-- Menu -->
+        <figure class="hamburger" id="btn_drop_menu">
+            <span class="material-symbols-rounded" id="hamburger-icon">
+                menu
+            </span>
+
+            <!-- <span class="material-symbols-rounded" id="close-menu">
+                close
+            </span> -->
+        </figure>
+
+        <nav>
+            <div class="drop_menu">
+                <div class="drop_menu_flex">
+                    <article id="toggle-menu">
+                        <span class="material-symbols-rounded" id="toggle-menu-icon">
+                            sunny
+                        </span>
+
+                        <input type="checkbox" id="toggle" />
+                        <label for="toggle"></label>
+
+                        <span class="material-symbols-rounded" id="toggle-menu-icon">
+                            brightness_2
+                        </span>
+                    </article>
+
+                    <button class="btn-logout" id="logout-btn">
+                        <span class="material-symbols-rounded">
+                            logout
+                        </span>
+                    </button>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- MAIN -->
+    <main>
+
+        <!-- Btn Activate Sign up -->
+        <figure class="activate-signup">
+            <a>
+                <span class="material-symbols-rounded">
+                    add_reaction
+                </span>
+            </a>
+        </figure>
+
+        <!-- Btn Activate Log in -->
+        <figure class="activate-login">
+            <a>
+                <span class="material-symbols-rounded">
+                    login
+                </span>
+            </a>
+        </figure>
+
+        <!-- LOGIN SIGNUP SECTION -->
+        <section class="container-login">
+            <!-- Logo Login -->
+            <figure class="logo-login">
+                <img src="assets/img/kitnote_logo_final.svg" alt="Logo">
+            </figure>
+
+            <!-- Login Signup Forms -->
+            <section class="login-signup">
+
+                <!-- Signup Confirmation -->
+                <figure>
+                    <p class="signup-confirm">
+                        <span class="material-symbols-rounded">
+                            verified
+                        </span>
+                        Successfully Signed Up
+                    </p>
+                </figure>
+
+                <figure class="login-signup form">
+                    <div>
+                        <!-- Signup -->
+                        <form id="signup-form" class="form-fields" method="post" novalidate>
+                            
+                            <input type="text" name="signup-name" id="signup-username" placeholder="YOUR NAME" required/>
+
+                            <input type="email" name="signup-username" id="signup-name" placeholder="YOUR EMAIL" required/>
+
+                            <input type="password" name="signup-password" id="signup-password" placeholder="PASSWORD" required/>
+
+                            <label for="Password">Min. 8 characters</label>
+
+                            <input type="password" name="password_confirmation" id="password_confirmation" placeholder="CONFIRM PASSWORD" required/>
+
+                            <!-- ERROR MSG SIGN UP-->
+                            <div id="error-message-up">ERROR</div>
+
+                            <button type="submit" id="btn-signup">
+                                <span class="material-symbols-rounded">
+                                    add_reaction
+                                </span>
+                            </button>
+                        </form>
+
+                        <!-- Login -->
+                        <form id="login-form" class="form-fields">
+                            <!-- ERROR MSG SIGN IN-->
+                            <div id="error-message-in">ERROR</div>
+
+                            <input type="email" name="signin-username" id="signin-username" placeholder="EMAIL" required/>
+
+                            <input type="password" name="signin-password" id="signin-password" placeholder="PASSWORD" required/>
+
+                            <button type="submit" id="btn-login">
+                                <span class="material-symbols-rounded">
+                                    login
+                                </span>
+                            </button>
+
+                        </form>
+                    </div>
+                </figure>
+
+                <figure class="cat-boss">
+                    <img src="assets/img/cat-boss.svg" alt="A bossy cat wearing sunglasses and a tie">
+                </figure>
+            </section>
+
+        </section>
+        <!-- END LOGIN SIGNUP SECTION -->
+
+        <!-- Menu Filter Add -->
+        <section class="menu-filter-add container-notes">
+            <figure class="left">
+                <div class="menu-filter">
+                    <span class="material-symbols-rounded" id="show-checked">
+                        check_circle
+                    </span>
+
+                    <span class="material-symbols-rounded" id="inWork">
+                        radio_button_unchecked
+                    </span>
+
+                    <span class="material-symbols-rounded" id="color-category-filter-btn">
+                        palette
+                    </span>
+
+                    <figure class="color-category" id="color-category-filter">
+                        <span class="color-purple"></span>
+                        <span class="color-blue"></span>
+                        <span class="color-green"></span>
+                        <span class="color-yellow"></span>
+                        <span class="color-red"></span>
+                        <span class="color-pink"></span>
+                     </figure>
+
+                    <span class="material-symbols-rounded" id="all-notes-btn">
+                        format_list_bulleted
+                    </span>
+
+                    <span class="material-symbols-rounded" id="shuffle">
+                        swap_vert
+                    </span>
+                </div>
+            </figure>
+
+            <figure class="right">
+                <div class="menu-add">
+                    <span class="material-symbols-rounded" id="add_note">
+                        add
+                    </span>
+                </div>
+            </figure>
+        </section>
+
+        <!-- NOTES SECTION -->
+        <section class="container-notes ">
+
+            <!-- All Notes -->
+            <section class="all-notes">
+
+                <!-- Note -->
+
+            </section>
+        </section>
+        <!-- END NOTES SECTION -->        
+
+    </main>
+
+    <!-- JS -->
+    <script src="assets/js/script.js" defer></script>
+    <script src="assets/js/drop-menu_dark-mode.js" defer></script>
+</body>
+</body>
+
+</html>

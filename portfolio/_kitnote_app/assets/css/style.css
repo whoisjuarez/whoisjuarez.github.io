@@ -1,0 +1,497 @@
+@import url('login-signup.css');
+@import url('notes.css');
+
+:root {
+	--blue:#56e0ff;
+   --green: #65F997;
+   --yellow: #f6ef85;
+   --orange: #ffa463;
+   --red: #fc7676;
+	--pink:#faa1cc;
+   --purple: #cc9cff;
+   --light-gray: #DEDEDE;
+   --black: #000;
+   --white: #fff;
+   --radius-max: 10rem;
+   --radius-min: .625rem;
+}
+
+html {
+   scroll-behavior: smooth;
+   overflow-x: hidden;
+   
+   /* Scrollbar Firefox */
+   scrollbar-color: var(--black) var(--light-gray);
+   scrollbar-width: thin;
+}
+
+/* Scrollbar Chrome/Safari */
+::-webkit-scrollbar{
+   width: 5px;
+}
+
+::-webkit-scrollbar-thumb{
+   background-color: var(--black);
+   border-radius: var(--radius-max);
+}
+
+::-webkit-scrollbar-thumb:hover{
+   background-color: var(--black);
+}
+
+/* RESET */
+/*
+   1. Use a more-intuitive box-sizing model.
+*/
+*, *::before, *::after {
+   box-sizing: border-box;
+}
+/*
+   2. Remove default margin
+*/
+* {
+   margin: 0;
+}
+/*
+   Typographic tweaks!
+   3. Add accessible line-height
+   4. Improve text rendering
+*/
+body {
+   font-family: 'Work Sans', sans-serif;
+   line-height: 1.5;
+   -webkit-font-smoothing: antialiased;
+   background-color: var(--bg-color-page);
+}
+/*
+   5. Improve media defaults
+*/
+img, picture, video, canvas, svg {
+   display: block;
+   max-width: 100%;
+}
+/*
+   6. Remove built-in form typography styles
+*/
+input, button, textarea, select {
+   font: inherit;
+   border: none;
+   background: transparent;
+}
+
+select{
+   width: max-content;
+}
+/*
+   7. Avoid text overflows
+*/
+ p, h1, h2, h3, h4, h5, h6 {
+   overflow-wrap: break-word;
+}
+/*
+   8. Create a root stacking context
+*/
+#root, #__next {
+   isolation: isolate;
+}
+
+/* *************** */
+
+/* CUSTOM STYLES */
+header{
+   position: fixed;
+   top: 0;
+   left: 0;
+   width: 100%;
+   z-index: 1002;
+   outline: 1px solid var(--light-gray);
+   background-color: var(--bg-color-page);
+   padding-bottom: .8rem;
+   margin-bottom: .8rem;
+}
+
+nav{
+   position: absolute;
+   top: 110%;
+   right: 7%;
+}
+
+a, button{ 
+   cursor: pointer;
+   transition: ease-in-out .15s;
+}
+
+h3{
+   font-size: 1.3rem;
+   line-height: 1.5;
+   color: var(--black);
+}
+
+p{
+   font-size: 1rem;
+   line-height: 1.5;
+   color: var(--black);
+}
+
+/* GENERAL STYLES */
+.container-notes{
+   width: 90%;
+   margin: 0 auto;
+}
+
+/* Dark/Light Mode Styles */
+.light-mode{
+   --bg-color-page: var(--white);
+   --bg-color-menus: var(--black);
+   --toggle-color-label: var(--white);
+   --icons-color: var(--white);
+   --btn-logout-color: var(--black);
+   --hover-color: var(--orange);
+}
+
+.dark-mode {
+   --bg-color-page: var(--black);
+   --bg-color-menus: var(--white);
+   --toggle-color-label: var(--black);
+   --icons-color: var(--black);
+   --btn-logout-color: var(--white);
+   --hover-color: var(--orange);
+}
+
+/* Material Symbol Style */
+.material-symbols-outlined {
+  font-variation-settings:
+  'FILL' 0,
+  'wght' 300,
+  'GRAD' 0,
+  'opsz' 24
+}
+
+/* DARK FILTER ACTIVE WHEN ADD OR OPEN NOTE */
+.dark-filter{
+   display: none;
+   /* display: block; */
+   position: fixed;
+   top: 0;
+   left: 0;
+   width: 100%;
+   height: 100vh;
+   z-index: 1099;
+   background-color: #00000080;
+}
+
+/* *************** */
+
+/* SPECIFIC STYLES */
+.logo-notes,
+.logo-notes-white{
+   display: none;
+   width: 290px;
+   margin: 2.5rem 0 1rem 5%;
+}
+
+.logo-notes-white{
+   display: none;
+}
+
+.logo-notes-show{
+   display: block;
+}
+
+.cat-deco,
+.cat-deco-white{
+   position: absolute;
+   width: 156px;
+   top:0;
+   right: -8%;
+   transform: rotate(-10deg);
+}
+
+.cat-deco-white{
+   display: none;
+}
+
+.cat-deco-show{
+   display: block;
+}
+
+@keyframes cat-rotate {
+   from {-webkit-transform: rotate(0deg);}
+   to {-webkit-transform: rotate(360deg);}
+}
+
+/* 
+** START Menus
+*/
+#open-menu{
+   display: none;
+   display: block;
+}
+
+#close-menu{
+   display: none;
+   /* display: block; */
+}
+
+.hamburger{
+   position: absolute;
+   top: 45%;
+   right: 7%;
+   text-align: center;
+   background-color: var(--bg-color-menus);
+   width: 3.8rem;
+   height: 3.8rem;
+   padding: .3125rem;
+   border-radius: var(--radius-max);
+   cursor: pointer;
+   transition: ease-in-out .15s;
+}
+
+.hamburger span{
+   color: var(--icons-color);
+   font-size: 2.5rem;
+   line-height: 1.25;
+}
+
+.hamburger:hover,
+.hamburger:active{
+   background-color: var(--hover-color);
+}
+
+.drop_menu{
+   display: flex;
+   background-color: var(--bg-color-menus);
+   width: 11rem;
+   padding: 1.5rem;
+   border-radius: var(--radius-min);
+   position: relative;
+   display: none;
+}
+
+.drop_menu_flex{
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   justify-content: center;
+   gap: 1.5rem;
+}
+
+.drop_menu span{
+   font-size: 32px;
+   color: var(--icons-color);
+}
+
+.drop_menu .btn-logout{
+   width: 3.5rem;
+   height: 3.5rem;
+   border-radius: var(--radius-max);
+   background-color: var(--bg-color-page);
+   transition: ease-in-out .15s;
+}
+
+.drop_menu .btn-logout:hover{
+   background-color: var(--hover-color);
+}
+
+.drop_menu .btn-logout span{
+   font-size: 2rem;
+   line-height: 1.5;
+   color: var(--btn-logout-color);
+}
+
+/*** toggle switch ***/
+#toggle{
+   display: none;
+}
+
+#toggle-menu label {
+   display: inline-block;
+   width: 52px;
+   height: 25px;
+   background-color: var(--bg-color-page);
+   border-radius: var(--radius-max);
+   position: relative;
+   cursor: pointer;
+   transition: ease-in-out .15s;
+}
+
+#toggle-menu label::before {
+   content: "";
+   position: absolute;
+   top: 5px;
+   left: 5px;
+   width: 15px;
+   height: 15px;
+   background-color: var(--bg-color-menus);
+   border-radius: var(--radius-max);
+   transition: transform 0.3s;
+}
+
+#toggle:checked + label {
+   background-color: var(--toggle-color-label);
+}
+
+#toggle:checked + label::before {
+   transform: translateX(1.6rem);
+}
+
+#toggle-menu label:hover{
+   background-color: var(--hover-color);
+}
+
+/* Menu Filter + Add */
+.menu-filter-add{
+   display: flex;
+   align-items: center;
+   position: fixed;
+   width: 100%;
+   bottom: 8%;
+   z-index: 1000;
+}
+
+.menu-filter-add .left,
+.menu-filter-add .right{
+   width: 50%;
+}
+
+.menu-filter,
+.menu-add{
+   position: absolute;
+   text-align: center;
+   background-color: var(--bg-color-menus);
+   color: var(--icons-color);
+   padding: .3125rem;
+   border-radius: var(--radius-max);
+   transition: ease-in-out .15s;
+}
+
+.menu-filter{
+   display:flex;
+   justify-content: center;
+   align-items: center;
+   gap: 1rem;
+   width: 17rem;
+   height: 3.25rem;
+   bottom: 50%;
+   transform: translateY(-25%);
+   left: 7%;
+   padding: .8rem;
+}
+
+.menu-filter span{
+   font-size: 2rem;
+   cursor: pointer;
+}
+
+.menu-filter span:hover,
+.menu-filter span:active{
+   color: var(--hover-color);
+}
+
+.menu-filter .color-category,
+.note-opened .color-category,
+.note-add-opened .color-category{
+   display: flex;
+   flex-direction: column;
+   gap: .5rem;
+   padding: .8rem;
+   background-color: var(--bg-color-menus);
+   border-radius: var(--radius-max);
+   position: absolute;
+   bottom: 110%;
+}
+
+#color-category-filter {
+   display: none;
+ }
+
+.color-category span{
+   cursor: pointer;
+   width: 1.5rem;
+   height: 1.5rem;
+   border-radius: var(--radius-max);
+}
+
+.note-opened .color-category{
+   left: 16%;
+}
+
+.note-add-opened .color-category{
+   left: 0%;
+}
+
+.note-opened .color-category span,
+.note-add-opened .color-category span{
+   width: 1.2rem;
+   height: 1.2rem;
+}
+
+.color-category .color-purple{
+   background-color: var(--purple);
+}
+
+.color-category .color-blue{
+   background-color: var(--blue);
+}
+
+.color-category .color-green{
+   background-color: var(--green);
+}
+
+.color-category .color-yellow{
+   background-color: var(--yellow);
+}
+
+.color-category .color-red{
+   background-color: var(--red);
+}
+
+.color-category .color-pink{
+   background-color: var(--pink);
+}
+
+.note-menu #color-category-add {
+   position: absolute;
+   bottom: 100%;
+   left: 0%;
+   display: none;
+}
+
+.menu-add{
+   justify-content: flex-end;
+   cursor: pointer;
+   bottom: 50%;
+   right: 7%;
+   padding: 0 .5rem;
+}
+
+.menu-add span{
+   font-size: 4rem;
+   line-height: 1.25;
+}
+
+.menu-add:hover,
+.menu-add:active{
+   background-color: var(--hover-color);
+}
+
+/* *************** */
+
+/* Media queries */
+@media only screen and (min-width: 481px) {
+   .cat-deco,
+   .cat-deco-white{
+      top:15%;
+      right: 15%;
+   }
+
+   .cat-animation{
+      width: 400px;
+      top: 30vh;
+      left: 35%;
+   }
+
+   .note-opened .color-category{
+      left: 0.8%;
+   }
+}

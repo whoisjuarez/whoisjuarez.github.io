@@ -1,0 +1,213 @@
+/* 
+** START Notes
+*/
+.all-notes{
+   margin: 11.5rem 0 2rem;
+   display: grid;
+   gap: 1rem;
+   grid-template-columns: repeat(6, 1fr);
+   align-items: center;
+}
+
+.note-container{
+   grid-column: span 3;
+   height: 300px;
+   overflow: hidden;
+   padding: 1rem;
+   outline: 3px solid transparent;
+   border-radius: var(--radius-min);
+   background-color: (--blue);
+   position: relative;
+   transition: ease-in-out .15s;
+}
+
+
+.note-content{
+   position: relative;
+   display: inline-block;
+   width: 100%;
+}
+
+.note-title{
+   width: 100%;
+   margin-bottom: .5rem;
+   font-weight: 600;
+}
+
+.note-content .note-text{
+   height: 190px;
+   overflow: hidden;
+}
+
+.note-content,
+.note-title,
+.note-text{
+   background-color: transparent;
+}
+
+.note-content #char-count-add,
+.note-content #char-count-edit{
+   position: absolute;
+   bottom: -7%;
+   left: 50%;
+   transform: translateX(-50%);
+   background-color: #00000010;
+   border-radius: var(--radius-max);
+   color: #555;
+   font-size: 0.8rem;
+   font-weight: 100;
+   padding: 0 .5rem;
+   z-index: 1;
+}
+
+.note-menu{
+   display: flex;
+   align-items: center;
+   gap: 1.5rem;
+   position: absolute;
+   bottom: 0;
+   left: 0;
+   width: 100%;
+   padding: .5rem .8rem .3rem;
+   z-index: 1;
+   background-color: #0000001d;
+}
+
+.note-menu .left{
+   width: 80%;
+   display: flex;
+   justify-content: flex-start;
+}
+
+.note-menu .right{
+   width: 20%;
+   display: flex;
+   justify-content: flex-end;
+}
+
+.note-menu span{
+   font-size: 1.5rem;
+}
+
+.note-menu span:hover{
+   color: var(--white);
+}
+
+.note-menu button span:hover{
+   color: var(--white);
+}
+
+/* *************** */
+/* NOTE OPENED */
+.note-opened{
+   display: none;
+   /* display: block; */
+}
+
+.note-opened {
+   width: 90%;
+   max-width: 500px;
+   height: 500px;
+   position: fixed;
+   left: 50%;
+   top: 50%;
+   transform: translate(-50%, -50%);
+   border-radius: var(--radius-min);
+   z-index: 10100;
+}
+
+.note-closed {
+   display: none;
+}
+
+.note-opened-content {
+   position: absolute;
+   top: 0;
+   left: 0;
+   width: 100%;
+   height: 100%;
+   overflow: auto;
+   padding: 1.5rem;
+   color: var(--black);
+}
+
+.note-opened-content .note-content .note-text{
+   overflow-y: auto;
+   width: 100%; 
+   height: 392px; 
+   resize: none;
+}
+
+.note-opened .close-note-opened {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   position: absolute;
+   z-index: 1;
+   top: -2%;
+   right: -2%;
+   background-color: var(--black);
+   width: 2.2rem;
+   height: 2.2rem;
+   line-height: .2;
+   border-radius: var(--radius-max);
+}
+
+.note-opened .close-note-opened span{
+   color: var(--white);
+   cursor: pointer;
+   transition: ease-in-out .15s;
+}
+
+.note-opened .close-note-opened:hover,
+.note-opened .close-note-opened:active{
+   background-color: var(--orange);
+}
+
+/* *************** */
+/* NOTE ADD */
+.note-add-opened{
+   display: none;
+   /* display: block; */
+}
+
+.note-add-opened{
+   background: var(--white);
+}
+
+.note-add-opened .note-menu .left{
+   margin-bottom: .5rem;
+}
+
+.note-add-opened .note-menu span,
+.note-edit-opened .note-menu span{
+   color: var(--black);
+   border-radius: var(--radius-max);
+   font-size: 1.8rem;
+}
+
+.note-add-opened .note-menu #submit span:hover,
+.note-add-opened .note-menu #submit span:active,
+.note-add-opened .note-menu #update:hover,
+.note-add-opened .note-menu #update:active{
+   color: var(--orange);
+}
+
+/* Disable button if more than 1200 chars */
+.disabled-button {
+   pointer-events: none; /* Disable clicking */
+   opacity: 0.3; /* Reduce opacity to visually indicate disabled state */
+}
+
+/* *************** */
+
+/* Media queries */
+@media only screen and (min-width: 481px) {
+   .all-notes{
+      grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+   }
+
+   .note-container{
+      grid-column: span 1;
+   }
+}
