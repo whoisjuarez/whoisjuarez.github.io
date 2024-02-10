@@ -1,0 +1,15 @@
+[
+   {
+      "question" : "hi|hello",
+      "answer" : ["hello, take me to your leader!"]
+   },
+   {
+      "question" : "a movie|movie",
+      "answer" : ["My favorite movie is 'Mars Attack', but i would change the ending"]
+   },
+
+   {
+      "question" : "bacon pancake|bacon pancakes|bacon|pancake|pancakes",
+      "answer" : ["Bacon pancakes! Making Bacon Pancakes. Take some bacon and I put it in a pancake. Bacon Pancakes. That's what it's gonna make, Bacon Pancake!"]
+   }
+]
