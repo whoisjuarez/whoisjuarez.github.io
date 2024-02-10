@@ -1,0 +1,299 @@
+@import 'style_general';
+
+/* Animation Extend Strip */
+@mixin easeOut {
+   transition: all .6s cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+.bio {
+   // height: 1000px;
+   min-height: 100vh;
+   text-align: center;
+   overflow: hidden;
+   position: relative;
+   
+   // Strip BG
+
+   &__strip {
+      will-change: width, left, z-index, height;
+      position: absolute;
+      width: calc(100vw / 6);
+      min-height: 100vh;
+
+      $calc-vw: calc(100vw / 6);
+      $calc-vh: calc(100vh / 6);
+
+      overflow: hidden;
+      cursor: pointer;
+      @include easeOut;
+      
+      &:nth-child(1) {
+         left: 0;
+      }
+      
+      &:nth-child(2) {
+         left: $calc-vw;
+      }
+      
+      &:nth-child(3) {
+         left: $calc-vw * 2;
+      }
+      
+      &:nth-child(4) {
+         left: $calc-vw * 3;
+      }
+      
+      &:nth-child(5) {
+         left: $calc-vw * 4;
+      }
+
+      &:nth-child(6) {
+         left: calc(($calc-vw * 5) - .1%);
+      }
+      
+      // Strip & Content BG Images
+      &:nth-child(1) {
+         .bio__content {
+            background: url(../img/life.webp) no-repeat;
+            background-position: center center;
+            background-size: cover;
+
+            @include media('breakpoint-medium', 'breakpoint-small'){
+               background-position: bottom center;
+            }
+         }
+      }
+      
+      &:nth-child(2) {
+         .bio__content {
+            background: url(../img/dictatorship.webp) no-repeat top center;
+            background-size: cover;
+         }
+      }
+      
+      &:nth-child(3) {
+         .bio__content {
+            background: url(../img/provocative.jpg) no-repeat center center;
+            background-size: cover;
+         }
+      }
+      
+      &:nth-child(4) {
+         .bio__content {
+            background: url(../img/worlds.webp) no-repeat center top;
+            background-size: cover;
+         }
+      }
+      
+      &:nth-child(5) {
+         .bio__content {
+            background: url(../img/expression.jpg) no-repeat center center rgba($black, .5);
+            background-size: cover;
+         }
+      }
+
+      &:nth-child(6) {
+         .bio__content {
+            background: url(../img/struggle.jpg) no-repeat center center;
+            background-size: cover;
+         }
+      }
+      
+      // Breakpoint Styles
+      @include media('breakpoint-medium', 'breakpoint-small') {
+         min-height: $calc-vh;
+
+         &:nth-child(n) {
+            left: 0;
+            width: 100%;
+         }
+         
+         &:nth-child(1) {
+            top: 0;
+         }
+
+         &:nth-child(2) {
+            top: $calc-vh;
+         }
+
+         &:nth-child(3) {
+            top: $calc-vh * 2;
+         }
+
+         &:nth-child(4) {
+            top: $calc-vh * 3;
+         }
+
+         &:nth-child(5) {
+            top: $calc-vh * 4;
+         }
+
+         &:nth-child(6) {
+            top: $calc-vh * 5;
+         }
+      }
+   }
+
+   // Strip Title
+
+   .bio__title {
+      display: block;
+      margin: 0;
+      position: relative;
+      z-index: 2;
+      width: fit-content;
+      rotate: -90deg;
+      padding: 1.5rem;
+      border: 1px solid $white;
+      @include easeOut;
+      
+      @include media('breakpoint-medium', 'breakpoint-small'){
+         rotate: 0deg;
+         padding: 1rem;
+         @include border-half-px-white; 
+      }
+
+      @include media('breakpoint-small'){
+         font-size: 2rem;
+         padding: .5rem;
+      }
+   }
+   
+   // Strip Content
+
+   .bio__content {
+      animation-duration: 1s;
+      animation-timing-function: cubic-bezier(0.23, 1, 0.32, 1);
+      animation-fill-mode: both;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      text-decoration: none;
+      @include border-half-px-white;
+
+      &:hover,
+      &:active {
+         &:before {
+            background: $black;
+            opacity: 0.6;
+         }
+      }
+
+      &:before {
+         content: "";
+         position: absolute;
+         z-index: 1;
+         top: 0;
+         left: 0;
+         width: 100%;
+         height: 100%;
+         background: $black;
+         opacity: 0.15;
+         transform-origin: center center;
+         @include easeOut;
+
+         @include media('breakpoint-medium', 'breakpoint-small') {
+            opacity: 0.6;
+         }
+      }
+   }
+   
+   .bio__inner-text {
+      will-change: transform, opacity;
+      position: absolute;
+      z-index: 5;
+      top: 50%;
+      left: 50%;
+      width: 60%;
+      transform: translate(-50%,-50%) scale(0.5);
+      opacity: 0;
+      padding: 2rem;
+      @include border-half-px-white;
+      @include easeOut;
+
+      @include media('breakpoint-medium', 'breakpoint-small') {
+         width: 75%;
+      }
+
+      @include media('breakpoint-small'){
+         width: 90%;
+         padding: 1rem;
+      }
+   }
+   
+   &__strip--expanded {
+      width: 99.9%;
+      position: absolute;
+      top: 0;
+      left: 0 !important;
+      z-index: 3;
+      cursor: default;
+      
+      @include media('breakpoint-medium', 'breakpoint-small') {
+         min-height: 100vh;
+         height: max-content;
+         width: 100%;
+         top: 0 !important;
+      }
+      
+      .bio__title {
+         opacity: 0;
+      }
+      
+      .bio__inner-text {
+         opacity: 1;
+         transform: translate(-50%, -50%) scale(1);
+         
+         p{
+            font-weight: 400;
+         }
+
+         @include media('breakpoint-small'){
+            font-size: 1rem;
+         }
+         
+      }
+   }
+
+   // Close Btn
+   .material-symbols-outlined{
+      font-size: 2.5rem;
+      color: white;
+      transition: ease-in-out .15s;
+   }
+
+   .strip__close {
+      position: absolute;
+      right: 8%;
+      // top: 103vh;
+      top: 8%;
+      opacity: 0;
+      z-index: 10;
+      @include easeOut;
+      cursor: pointer;
+
+      @include media('breakpoint-medium', 'breakpoint-small') {
+         top: 5%;
+         right: 5%;
+      }
+
+      @include media('breakpoint-small'){
+         top: 2%;
+         right: 2%;
+      }
+      
+      &--show {
+         opacity: 1;
+      }
+
+      &:hover,
+      &:active {
+         rotate: 180deg;
+      }
+   }
+}

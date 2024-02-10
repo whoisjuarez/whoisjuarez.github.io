@@ -1,0 +1,567 @@
+$black: #000;
+$light-gray: #d8d8d8;
+$white: #fff;
+$font-text: 'Work Sans', sans-serif;
+$font-title: 'Elsie Swash Caps', serif;
+$font-subtitle: 'Chicle', serif;
+
+@mixin breakpoint-small {
+   @media screen and (max-width: 767px){
+      @content;
+   }
+}
+
+@mixin breakpoint-medium {
+   @media screen and (min-width: 768px) and (max-width: 1023px) {
+      @content;
+   }
+}
+
+@mixin breakpoint-large {
+   @media screen and (min-width: 1024px) and (max-width: 1180px) {
+      @content;
+   }
+}
+
+// So I can use two breakpoints at once
+@mixin media($keys...) {
+   @each $key in $keys {
+      @if ($key == 'breakpoint-small') {
+         @include breakpoint-small {
+            @content;
+         }
+      } 
+      @else if ($key == 'breakpoint-medium') {
+         @include breakpoint-medium {
+            @content;
+         }
+      } 
+      @else if ($key == 'breakpoint-large') {
+         @include breakpoint-large {
+            @content;
+         }
+      }
+   }
+}
+
+// Borders
+@mixin border-half-px-white{
+   border: .5px solid $white;
+}
+
+/* RESET */
+*, *::before, *::after {
+   box-sizing: border-box;
+}
+
+* {
+   margin: 0;
+}
+
+html {
+   scroll-behavior: smooth;
+   overflow-x: hidden;
+   background-color: $black;
+
+   // Scrollbar Firefox
+   scrollbar-color: $white $black;
+   scrollbar-width: thin;
+}
+
+// Scrollbar Chrome/Safari
+::-webkit-scrollbar{
+   width: 1px;
+}
+
+::-webkit-scrollbar-thumb{
+   background-color: $white;
+}
+
+::-webkit-scrollbar-thumb:hover{
+   background-color: $white;
+}
+
+body {
+   font-family: $font-text;
+   line-height: 1.5;
+   -webkit-font-smoothing: antialiased;
+   color: $white;
+}
+
+img, picture, video, canvas, svg {
+   display: block;
+   max-width: 100%;
+}
+
+input, button, textarea, select {
+   font: inherit;
+}
+
+p, h1, h2, h3, h4, h5, h6 {
+   overflow-wrap: break-word;
+}
+
+#root, #__next {
+   isolation: isolate;
+}
+
+/* TEXT SELECTION */
+::selection{
+   background: $white !important; 
+   color: $black !important;
+}
+::-moz-selection {
+   background: $white !important; 
+   color: $black !important;
+}
+
+/* CUSTOM STYLES */
+
+// General BG
+body{
+   background: url("../img/Star_XL2.svg");
+   background-repeat: repeat-x;
+   background-size: 100% auto;
+
+   @include media('breakpoint-medium', 'breakpoint-large') {
+      background-size: 180% auto;
+   }
+
+   @include media('breakpoint-small'){
+      background-size: 250% auto;
+   }
+}
+
+h1, 
+h3 {
+   font-size: 4rem;
+   font-family: $font-title;
+   line-height: 1.1;
+   letter-spacing: .1rem;
+   color: $white;
+   text-transform: capitalize;
+   margin-bottom: 1rem;
+
+   @include media('breakpoint-medium', 'breakpoint-large'){
+      font-size: 3rem;
+   }
+
+   @include breakpoint-small{
+      font-size: 2.5rem;
+      margin-bottom: .5rem;
+   }
+}
+
+h2{
+   font-size: 2.3rem;
+   line-height: 1.3;
+   text-transform: uppercase;
+   font-weight: 200;
+   margin-bottom: .5rem;
+
+   @include media('breakpoint-medium', 'breakpoint-large'){
+      font-size: 2rem;
+   }
+
+   @include media('breakpoint-small'){
+      font-size: 1.5rem;
+   }
+}
+
+h3{
+   font-size: 2rem;
+   margin-bottom: 0;
+
+   @include media('breakpoint-medium', 'breakpoint-large') {
+      font-size: 3rem;
+   }
+
+   @include breakpoint-small{
+      font-size: 2rem;
+   }
+}
+
+p {
+   font-size: 1.25rem;
+   font-weight: 300;
+   margin-bottom: 1rem;
+
+   @include media('breakpoint-small'){
+      font-size: 1.1rem;
+   }
+}
+
+a{
+   font-size: 1.25rem;
+   text-decoration: none;
+   font-weight: 400;
+   color: $white;
+
+   @include breakpoint-small{
+      font-size: 1.1rem;
+   }
+}
+
+/* GENERAL STYLES */
+
+// Progress Bar
+#progress-bar{
+   display: none;
+   position: fixed;
+   z-index: 10;
+   bottom: 30px;
+   right: 3%;
+   height: 50px;
+   width: 50px;
+   place-items: center;
+   border-radius: 50%;
+   cursor: pointer;
+   transition: 0.25s ease-in-out;
+   border: 1px solid $black;
+   outline: 1.5px solid $white;
+
+   #progress-fill{
+      display: grid;
+      place-items: center;
+      height: calc(100% - 5px);
+      width: calc(100% - 5px);
+      background-color: $white;
+      border-radius: 50%;
+      font-size: 2rem;
+      color: $black;
+   }
+}
+
+// Button
+.btn{
+   display: inline-block;
+   background-color: $black;
+   padding: 1rem 2rem;
+   position: relative;
+   @include border-half-px-white;
+
+   @include media('breakpoint-medium', 'breakpoint-large') {
+      padding: .75rem 1.5rem;
+   }
+
+   @include breakpoint-small {
+      padding: .5rem 1rem;
+   }
+
+   &:before{
+      position: absolute;
+      content: "";
+      width: 100%;
+      height: 0;
+      bottom: 0;
+      left: 0;
+      background-color: $white;
+      transform: translateY(100%);
+      transition-duration: .25s;
+   }
+   
+   &:hover,
+   &:active{
+      &:before{
+         height: 10px;
+         bottom: 10px;
+
+         @include media('breakpoint-medium', 'breakpoint-large') {
+            height: 7px;
+            bottom: 7px;
+         }
+
+         @include breakpoint-medium {
+            height: 5px;
+            bottom: 5px;
+         }
+      }
+   }
+}
+
+.border{
+   @include border-half-px-white;
+   padding: 1rem;
+
+   @include media('breakpoint-small'){
+      .border{
+         padding: .7rem;
+      }
+   }
+}
+
+/* HERO */
+
+.hero{
+   height: 100vh;
+   min-height: 1000px;
+   padding: 50px 50px 50px 150px;
+   margin-bottom: 150px;
+
+   @include media('breakpoint-large', 'breakpoint-medium', 'breakpoint-small'){
+      min-height: 100vh;
+      padding: 35px 35px 50px;
+      margin-bottom: 50px;
+   }
+
+   @include media('breakpoint-medium', 'breakpoint-small'){
+      height: fit-content;
+   }
+
+   @include breakpoint-small{
+      min-height: 100vh;
+      padding: 35px 20px;
+   }
+
+   .hero-flex{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100%;
+
+      @include media ('breakpoint-medium', 'breakpoint-small') {
+         flex-direction: column;
+         gap: 2rem;
+      }
+
+      @include breakpoint-small{
+         align-items: start;
+         gap: 1.5rem;
+      }
+
+      &__left{
+         width: 50%;
+
+         @include media('breakpoint-medium', 'breakpoint-small') {
+            width: 100%;
+            justify-content: center;
+            align-items: start;
+         }
+
+         .hero-title{
+            font-size: 10rem;
+            line-height: .9;
+
+            @include media('breakpoint-large') {
+               font-size: 7rem;
+            }
+
+            @include media('breakpoint-medium', 'breakpoint-small') {
+               font-size: clamp(5rem, 12vw, 7rem);
+               margin-left: 10px;
+            }
+
+            @include breakpoint-small{
+               font-size: clamp(5rem, 12vw, 6rem);
+               margin-bottom: 15px;
+            }
+         }
+
+         .text-box{
+            width: 60%;
+            background-color: $black;
+            padding: 2rem;
+            margin-left: 50px;
+
+            @include media('breakpoint-large', 'breakpoint-medium', 'breakpoint-small') {
+               width: 90%;
+               margin-left: 0;
+            }
+
+            @include media('breakpoint-medium', 'breakpoint-small') {
+               width: 100%;
+               padding: 1.5rem;
+            }
+
+            @include breakpoint-small{
+               padding: 1rem;
+            }
+
+            a{
+               margin-top: 150px;
+               display: flex;
+               align-items: center;
+               width: fit-content;
+
+               @include breakpoint-large{
+                  margin-top: 70px;
+               }
+
+               @include breakpoint-medium {
+                  margin-top: 50px;
+               }
+
+               @include breakpoint-small{
+                  margin-top: 2rem;
+               }
+
+               span{
+                  margin-left: 2rem;
+
+                  @include media('breakpoint-medium', 'breakpoint-large') {
+                     margin-left: 1.5rem;
+                  }
+
+                  @include media('breakpoint-medium', 'breakpoint-small') {
+                     margin-left: 1rem;
+                  }
+               }
+            }
+         }
+      }
+
+      &__right{
+         width: 50%;
+
+         @include media('breakpoint-medium', 'breakpoint-small') {
+            width: 100%;
+         }
+
+         .border{
+            width: 550px;
+
+            @include breakpoint-large {
+               width: 95%;
+            }
+
+            @include media('breakpoint-medium', 'breakpoint-small') {
+               width: 100%;
+            }
+            
+            @include media('breakpoint-small'){
+               padding: .7rem;
+            }
+         }
+
+         .photo-hero{
+            width: 100%;
+            background-color: $black;
+            height: 720px;
+
+            @include media('breakpoint-large'){
+               height: 650px;
+            }
+
+            @include media('breakpoint-medium') {
+               height: 500px;
+            }
+
+            @include breakpoint-small{
+               height: 450px;
+            }
+
+            &__bg{
+               background: url("../img/Caetano_white.webp") no-repeat center top;
+               background-size: cover;
+               height: 100%;
+               display: block;
+            }
+         }
+      }
+   }
+}
+
+/* NEWS SECTION */
+
+.news{
+   min-height: 100vh;
+   padding: 10rem 0;
+   position: relative;
+
+   @include media('breakpoint-medium', 'breakpoint-small') {
+      padding: 8rem 0;
+   }
+
+   @include media('breakpoint-small') {
+      height: fit-content;
+      padding: 5rem 0;
+   }
+
+   .news-flex{
+      display: flex;
+      justify-content: space-evenly;
+      gap: 2rem;
+      width: 90%;
+      padding: 20px;
+      margin: 0 auto;
+
+      @include media('breakpoint-large', 'breakpoint-medium', 'breakpoint-small') {
+         width: 95%;
+      }
+
+      @include media('breakpoint-medium', 'breakpoint-small'){
+         flex-wrap: wrap;
+      }
+
+      &__left,
+      &__right{
+         display: flex;
+         flex-direction: column;
+         justify-content:space-between;
+         width: 800px;
+         height: auto;
+         background-color: $black;
+         padding: 2rem;
+         @include border-half-px-white;
+
+         @include media('breakpoint-large', 'breakpoint-medium') {
+            width: 50%;
+            padding: 1.5rem;
+         }
+
+         @include media('breakpoint-medium', 'breakpoint-small') {
+            width: 90%;
+            justify-content: flex-start;
+         }
+
+         @include media('breakpoint-small'){
+            width: 100%;
+            padding: 1rem;
+         }
+
+         .btn{
+            margin-top: 2rem;
+         }
+      }
+   }
+}
+
+/* FOOTER */
+
+footer{
+   padding: 2rem;
+   margin-top: 2rem;
+
+   @include border-half-px-white;
+
+   @include media('breakpoint-medium', 'breakpoint-small') {
+      padding: 1.5rem;
+   }
+
+   .credits-flex{
+      display: flex;
+      justify-content: center;
+      gap: 1.5rem;
+
+      @include media('breakpoint-medium', 'breakpoint-small') {
+         flex-wrap: wrap;
+         width: fit-content;
+         gap: .8rem;
+         padding: 0 2rem;
+      }
+
+      .btn{
+         padding: .5rem 1rem;
+         font-size: .8rem;
+         text-align: center;
+   
+         &:hover,
+         &:active{
+            &:before{
+               height: 5px;
+               bottom: 5px;
+            }
+         }
+      }
+   }
+}

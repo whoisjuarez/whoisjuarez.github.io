@@ -1,0 +1,136 @@
+@import 'style_general';
+
+main{
+   background-repeat: repeat-x;
+   background-size: 100% auto;
+}
+
+.menu-flex{
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   width: 90%;
+   margin: 0 auto;
+   padding: 50px 0;
+
+   @include breakpoint-medium {
+      padding: 35px 0;
+   }
+
+   @include breakpoint-small {
+      padding: 20px 0;
+   }
+
+   button{
+      background-color: transparent;
+      border: none;
+      color: $white;
+      font-weight: 400;
+      cursor: pointer;
+
+      span{
+         font-size: 2rem;
+         padding: 1rem;
+         border-radius: 50%;
+         outline: 3px solid transparent;
+         outline-offset: -3px;
+         transition-duration: .25s;
+         @include border-half-px-white;
+   
+         @include breakpoint-small{
+            padding: 0.7rem;
+         }
+   
+         &:hover,
+         &:active{
+            outline: 3px solid $white;
+            outline-offset: 0px;
+         }
+      }
+   }
+
+   h3{
+      margin-bottom: 0;
+
+      @include breakpoint-small{
+         text-align: right;
+      }
+   }
+}
+
+.content-wrapper{
+   width: 90%;
+   margin: 0 auto;
+}
+
+.content-flex{
+   display: flex;
+   gap: 1.5rem;
+
+   @include media('breakpoint-medium', 'breakpoint-small') {
+      flex-direction: column;
+   }
+
+   &__left{
+      width: 40%;
+
+      @include media('breakpoint-medium', 'breakpoint-small') {
+         width: 100%;
+      }
+
+      figure{
+         img{
+            background-color: $black;
+         }
+
+         @include breakpoint-small{
+            padding: .7rem
+         }
+      }
+
+      figcaption{
+         padding: .5rem 1rem 0;
+         font-size: .8rem;
+         background-color: $black;
+
+         @include breakpoint-small{
+            padding: .5rem .5rem 0;
+         }
+      }
+   }
+
+   &__right{
+      width: 60%;
+      background-color: $black;
+      padding: 2rem;
+      @include border-half-px-white;
+
+      @include media('breakpoint-medium', 'breakpoint-small') {
+         width: 100%;
+      }
+
+      @include breakpoint-small{
+         padding: 1rem;
+      }
+
+      .sub-title{
+         margin-bottom: 1rem;
+
+         @include breakpoint-small{
+            margin-bottom: 0;
+         }
+      }
+
+      .author-date{
+         margin-bottom: 3rem;
+
+         p{
+            font-weight: 500;
+         }
+
+         @include breakpoint-small{
+            margin-bottom: 1.5rem;
+         }
+      }
+   }
+}
