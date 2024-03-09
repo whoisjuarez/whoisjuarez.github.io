@@ -1,3 +1,3 @@
-# André Cardoso
+# Pig Latin Translator - Python + Django
 
-### 2395069
+### Code for a Pig Latin translator on Python with Django
