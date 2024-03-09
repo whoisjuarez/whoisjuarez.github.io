@@ -3,7 +3,8 @@
 ### Code for a Task Management app developed in React.
 #### (Local storage only)
 ### [Click here to access the final product](https://maybelater-react.netlify.app)
-#### Functions: 
+
+#### Features: 
 - Add task
 - Edit Task
 - Delete task
