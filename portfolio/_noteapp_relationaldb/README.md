@@ -1,6 +1,6 @@
 # Project of a To Do List App with relational database
 ### [Click here to access the final product](https://andre69.web582.com/_block2/dynamic/_project_db_v2/todolist.html)
-#### Functions:
+#### Features:
 - Signup
 - Login
 - Add a task
